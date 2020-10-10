@@ -39,6 +39,8 @@ class CreateGroupView:UIView{
     var backBtn:IconButton1!
     
     
+    var a : Int = 1
+    
     var tapView1:CreateGroupListView!
     var tapView2:CreateGroupListView!
     var tapView3:CreateGroupListView!

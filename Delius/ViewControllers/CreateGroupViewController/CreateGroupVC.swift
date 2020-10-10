@@ -183,7 +183,6 @@ class CreateGroupVC:UIViewController{
                 self.currentPage = .main
             })
         }
-        
     }
     private func closeExtraVC(){
         if groupExtraVC == nil{
@@ -209,7 +208,6 @@ class CreateGroupVC:UIViewController{
         groupNameVC.view.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         groupNameVC.view.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         groupNameVC.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-        
         
         if let groupName = service.groupName{
             groupNameVC.contentView.nameEdt.text = groupName
