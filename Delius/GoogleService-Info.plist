@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>170453447580-hfn4v2hpqg05h8k7k4u26f7d4k1427ms.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.170453447580-hfn4v2hpqg05h8k7k4u26f7d4k1427ms</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>170453447580-2d1ljjcb6o3fa5riab44bbfh7d9drhhl.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyACiRnfQb8tpbcddGuBE3c0XPpAYAEqs1U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>170453447580</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.delius.delius.Delius</string>
+	<key>PROJECT_ID</key>
+	<string>delius-46aa7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>delius-46aa7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:170453447580:ios:a57ce1ecb4f20c1b</string>
+	<key>DATABASE_URL</key>
+	<string>https://delius-46aa7.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,392 @@
+/* 
+  LocalizedString.strings
+  DeliusV1.0.0
+
+  Created by 정윤환 on 11/05/2020.
+  Copyright © 2020 정윤환. All rights reserved.
+*/
+
+"Ok" = "확인";
+"Setting" = "설정";
+"Cancel" = "취소";
+"next" = "다음";
+"Man" = "남성";
+"Woman" = "여성";
+"Deli" = "딜리";
+"Like" = "라이크";
+"Booster" = "부스터";
+"UserFilter" = "검색 설정";
+"UserPhoneBlock" = "사용자 차단하기";
+"Buy" = "구매하기";
+"Error" = "오류";
+"Report" = "신고하기";
+"License" = "라이센스";
+"Logout" = "로그아웃하기";
+"Pause" = "사용중지하기";
+"Withdraw" = "탈퇴하기";
+
+"PermissionView001" = "Delius이용을 위해 다음 권한을 확인해주세요.";
+"PermissionView002" = "※필수적 접근 권한은 앱의 서비스 제공을 위해 필요하며 하단의‘시작하기’을 누를시 동의한 것으로 간주됩니다. 또한, 선택적 접근 권한은 원활한 서비스를 제공하기 위해 필요한 시점에 동의를 받고 있으며, 선택적 접근 권한은 허용하지 않으셔도 Delius를 이용하실 수 있습니다.";
+"PermissionView100" = "위치 (필수)";
+"PermissionView101" = "위치기반 매칭, 사용자 프로필 제공시 활용.";
+"PermissionView200" = "주소록 (선택사항)";
+"PermissionView201" = "그룹 초대, 원치않는 사용자 차단시 활용.";
+"PermissionView300" = "사진 (선택사항)";
+"PermissionView301" = "사진 업로드, 프로필 설정시 활용.";
+"PermissionView400" = "알림 (선택사항)";
+"PermissionView401" = "딜리어스 서비스 관련 알림시 활용.";
+"PermissionView900" = "시작하기";
+
+"PermissionAlert001" = "이미 권한을 허용하셨습니다";
+"PermissionAlert002" = "설정하시겟습니까?";
+
+
+"TermView001" = "시작전 약관동의가 필요합니다";
+"TermView101" = "서비스 이용약관";
+"TermView201" = "위치서비스 이용약관";
+"TermView301" = "개인정보 취급방침";
+"TermView901" = "약관동의 확인";
+"TermView902" = "약관에 모두 동의하셔야 합니다";
+
+
+
+"WelcomeView001" = "Delius가 제공하는 서비스는 만 18세 이상만 이용할 수 있습니다";
+"WelcomeView101" = "전화번호로 시작하기";
+"WelcomeView102" = "이메일로 시작하기";
+"WelcomeCell001" = "친구와 함께해서\n색다른 시간 딜리어스";
+"WelcomeCell002" = "나와 잘맞는\n동네친구 추천!";
+"WelcomeCell003" = "혼자가기 부담되면\n같이가면 되잖아?";
+"WelcomeCell004" = "세계 최초 그룹 데이팅 앱.";
+"WelcomeCell102" = "딜리와 라이크를 통한 매칭.";
+"WelcomeCell103" = "친구와 함께하는 그룹매칭.";
+"WelcomeCell104" = "요즘 다한다는데";
+
+
+
+
+"LoginView001" = "로그인";
+"LoginView101" = "회원가입";
+"LoginView102" = "ID/PW 찾기";
+"LoginView900" = "이메일과 비밀번호를 입력해주세요";
+"LoginView901" = "이메일이 올바르지 않습니다";
+"LoginView902" = "사용불가한 유저입니다";
+"LoginView903" = "잘못된 비밀번호입니다";
+"LoginView904" = "이메일 로그인 중 오류가 발생하였습니다";
+"LoginView911" = "프로필 작성을 하지않았습니다\n프로필작성하시겠습니까?";
+"LoginView912" = "사용자의 정보가 아직 빅데이터에 적용되지 않았습니다\n하셔야됩니다";
+
+
+
+"SignupView001" = "핸드폰 인증";
+"SignupView002" = "이메일 연동";
+"SignupView003" = "프로필 정보";
+"SignupView004" = "가입 완료";
+
+
+"PhoneAuthView001" = "전화번호를 적어주세요";
+"PhoneAuthView002" = "본인의 휴대폰 번호로 인증해주세요";
+"PhoneAuthView003" = "인증";
+"PhoneAuthView101" = "인증번호가 발송되었습니다";
+"PhoneAuthView102" = "인증번호를 적어주세요";
+"PhoneAuthView103" = "인증번호 문자가 도착하는데에는 다소 시간이 걸릴 수 있습니다";
+"PhoneAuthView104" = "인증번호 확인";
+"PhoneAuthView500" = "국가번호 선택";
+
+
+
+
+"EmailAuthView001" = "이메일";
+"EmailAuthView002" = "비밀번호";
+"EmailAuthView300" = "이메일 계정을 입력해주세요.";
+"EmailAuthView301" = "비밀번호를 입력해주세요.";
+"EmailAuthView302" = "비밀번호를 확인해주세요";
+
+
+
+"ProfileAuthView001" = "프로필 정보";
+"ProfileAuthView002" = "이름과 나이,성별은 정보 변경이 불가하거나 힘들수 있습니다";
+"ProfileAuthView101" = "사진업로드";
+"ProfileAuthView102" = "이름";
+"ProfileAuthView103" = "직업";
+"ProfileAuthView104" = "성별";
+"ProfileAuthView105" = "생년월일";
+"ProfileAuthView106" = "상태문구";
+"ProfileAuthView107" = "사용목적";
+"ProfileAuthView108" = "연애";
+"ProfileAuthView109" = "관심사";
+"ProfileAuthView110" = "매력";
+
+
+"ProfileAuthView102sub" = "변경이 힘들 수 있습니다";
+"ProfileAuthView103sub" = "직업을 적어주세요";
+"ProfileAuthView104sub" = "성별 변경은 힘들 수 있습니다";
+"ProfileAuthView105sub" = "나이 변경은 힘들 수 있습니다";
+"ProfileAuthView106sub" = "다른 사용자에게 띄워질 대표 문구";
+"ProfileAuthView107sub" = "딜리어스를 사용하는 이유는?";
+"ProfileAuthView108sub" = "현재 어떤 연애 상태인가요";
+"ProfileAuthView109sub" = "어떤 분야에 관심이 있나요";
+"ProfileAuthView110sub" = "당신의 매력은?";
+
+"SignupCompletionView001" = "회원가입이 완료되었습니다";
+"SignupCompletionView002" = "회원님의 정보를 딜리어스 빅데이터에 정리 중입니다\n이 과정은 일정시간을 소요합니다";
+
+
+"SoloInfo1-1" = "친구만들기";
+"SoloInfo1-2" = "연인찾기";
+"SoloInfo1-3" = "심심해";
+"SoloInfo1-4" = "그룹미팅해보고싶음";
+"SoloInfo1-5" = "식사하자";
+"SoloInfo1-6" = "대화해요";
+"SoloInfo1-7" = "외로워서";
+"SoloInfo1-8" = "기타";
+
+"SoloInfo2-1" = "솔로";
+"SoloInfo2-2" = "연애중";
+"SoloInfo2-3" = "좋은사람찾는중";
+"SoloInfo2-4" = "생각없음";
+"SoloInfo2-5" = "이별중";
+"SoloInfo2-6" = "솔로된지얼만안됨";
+"SoloInfo2-7" = "비밀";
+"SoloInfo2-8" = "기타";
+
+"SoloInfo3-1" = "관심사1";
+"SoloInfo3-2" = "관심사2";
+"SoloInfo3-3" = "관심사3";
+"SoloInfo3-4" = "관심사4";
+"SoloInfo3-5" = "관심사5";
+"SoloInfo3-6" = "관심사6";
+"SoloInfo3-7" = "관심사7";
+"SoloInfo3-8" = "관심사8";
+
+"SoloInfo4-1" = "재밌는 사람";
+"SoloInfo4-2" = "유캐한 사람";
+"SoloInfo4-3" = "우울한 사람";
+"SoloInfo4-4" = "술잘먹는 사람";
+"SoloInfo4-5" = "활발한 사람";
+"SoloInfo4-6" = "똑똑한 사람";
+"SoloInfo4-7" = "비쥬얼이 좋은 사람";
+"SoloInfo4-8" = "기타";
+
+
+
+"GroupInfo1-1" = "친구만들기";
+"GroupInfo1-2" = "연인찾기";
+"GroupInfo1-3" = "심심해";
+"GroupInfo1-4" = "그룹미팅해보고싶음";
+"GroupInfo1-5" = "식사하자";
+"GroupInfo1-6" = "대화해요";
+"GroupInfo1-7" = "외로워서";
+"GroupInfo1-8" = "기타";
+
+"GroupInfo2-1" = "솔로";
+"GroupInfo2-2" = "연애중";
+"GroupInfo2-3" = "좋은사람찾는중";
+"GroupInfo2-4" = "생각없음";
+"GroupInfo2-5" = "이별중";
+"GroupInfo2-6" = "솔로된지얼만안됨";
+"GroupInfo2-7" = "비밀";
+"GroupInfo2-8" = "기타";
+
+"GroupInfo3-1" = "관심사1";
+"GroupInfo3-2" = "관심사2";
+"GroupInfo3-3" = "관심사3";
+"GroupInfo3-4" = "관심사4";
+"GroupInfo3-5" = "관심사5";
+"GroupInfo3-6" = "관심사6";
+"GroupInfo3-7" = "관심사7";
+"GroupInfo3-8" = "관심사8";
+
+
+
+"AuthView001" = "이메일 연동 중단";
+"AuthView002" = "프로필 정보 입력 중단";
+"AuthView101" = "현재 진행중인 작업은 저장되지 않습니다.\n중단하시겠습니까?";
+
+
+
+
+
+
+"SideMenu001" = "내 정보";
+"SideMenu002" = "알림";
+"SideMenu003" = "채팅";
+"SideMenu004" = "내 그룹";
+"SideMenu101" = "아이템 구매";
+"SideMenu102" = "설정";
+
+"MenuGroupView001" = "그룹방을 생성해보세요";
+
+
+
+
+
+"FindAccountView001" = "계정 찾기";
+"FindAccountView002" = "이메일 찾기";
+"FindAccountView003" = "비밀번호 찾기";
+"FindAccountView101" = "핸드폰 인증";
+"FindAccountView102" = "가입한 이메일 계정을 찾기 위해서는 핸드폰 인증이 필요합니다";
+"FindAccountView103" = "문자 발송";
+"FindAccountView104" = "확인";
+"FindAccountView105" = "회원님의 이메일 계정은";
+"FindAccountView106" = "인증번호";
+
+
+
+"UserBlockView001" = "유저 차단하기";
+"UserBlockView002" = "차단 목록";
+"UserBlockView003" = "차단에 추가하기";
+"UserBlockView101" = "차단 번호";
+"UserBlockView102" = "내 연락처에서 찾기";
+
+
+"SoloFilterView001" = "개인 보기";
+"SoloFilterView002" = "성별";
+"SoloFilterView003" = "연령대";
+"SoloFilterView004" = "거리";
+"SoloFilterView005" = "매력";
+"SoloFilterView006" = "관심사";
+"SoloFilterView007" = "내성격";
+"SoloFilterView008" = "가입동기";
+"SoloFilterView009" = "서비스 위치";
+"SoloFilterView101" = "남성";
+"SoloFilterView102" = "여성";
+"SoloFilterView103" = "무곤";
+"SoloFilterView201" = "현위치사용";
+"SoloFilterView202" = "다른위치사용";
+
+"GroupFilterView001" = "그룹보기";
+"GroupFilterView002" = "그룹성별";
+"GroupFilterView003" = "그룹평균연령대";
+"GroupFilterView004" = "거리";
+"GroupFilterView005" = "매력";
+"GroupFilterView006" = "관심사";
+"GroupFilterView007" = "성격";
+"GroupFilterView008" = "서비스 위치";
+"GroupFilterView101" = "남성그룹";
+"GroupFilterView102" = "여성그룹";
+"GroupFilterView103" = "혼성그룹";
+"GroupFilterView201" = "내위치사용";
+"GroupFilterView202" = "다른위치사용";
+
+"FilterView001" = "매칭필터설정";
+"FilterView002" = "혼자보기설정";
+"FilterView003" = "그룹보기설정";
+"FilterView101" = "혼자보기설정하기";
+"FilterView102" = "그룹보기설정하기";
+"FilterView201" = "사용중";
+"FilterView202" = "사용중이지않음";
+
+
+"MenuView001" = "내 정보";
+"MenuView002" = "내 그룹";
+"MenuView003" = "구매";
+"MenuView004" = "설정";
+"MenuView101" = "편집";
+"MenuView201" = "그룹추가";
+
+"MenuView301" = "딜리어스 플러스";
+"MenuView302" = "딜리 구매하기";
+"MenuView303" = "부스터 구매하기";
+"MenuView401" = "검색 범위 설정하기";
+"MenuView402" = "사용자 차단";
+"MenuView3011" = "탭 하여 혜택보기";
+
+
+"BuyPlusUserView001" = "플러스 회원으로 업그레이드하고\n더 많은 혜택을 누리세요";
+"BuyPlusUserView002" = "딜리어스 앱내 구매는 다음 약관을 준수합니다";
+"BuyPlusUserView101" = "구매약관";
+
+"BuyPlusView501" = "데일리 딜리,라이크가 보다\n 많이 제공됩니다.";
+"BuyPlusView502" = "내게 라이크를 보낸 친구들을\n볼 수 있습니다.";
+"BuyPlusView503" = "지나쳤던 친구들을 다시\n만나볼 수 있습니다.";
+"BuyPlusView504" = "플러스 회원은 구매 시점으로부터 한달간 유지됩니다.";
+
+"BuyDeliView001" = "딜리가 부족하신가요?\n구매 후 추가로 경험해보세요";
+"BuyDeliView002" = "딜리어스 앱내 구매는 다음 약관을 준수합니다";
+"BuyDeliView101" = "구매약관";
+"BuyDeliView102" = "구매한 딜리는 데일리 딜리와 구분되어 표시됩니다.";
+
+"BuyBoosterView001" = "부스터를 사용하면 프로필이\n더 많은 사용자들에게\n노출됩니다";
+"BuyBoosterView002" = "딜리어스 앱내 구매는 다음 약관을 준수합니다";
+"BuyBoosterView101" = "구매약관";
+"BuyBoosterView102" = "부스터는 1개만 보유 가능하며 구매후 프로필 창에서 사용가능합니다.";
+
+
+
+"GroupSideNotiView001" = "피\n드";
+"GroupSideNotiView002" = "투\n표\n중";
+
+
+"AddingGroupView001" = "그룹만들기";
+"AddingGroupView101" = "그룹관리";
+"AddingGroupView102" = "그룹에 맞는 이름과 그룹의 대표문구를 설정해보세요";
+"AddingGroupView201" = "그룹원 관리";
+"AddingGroupView202" = "친구들의 핸드폰 번호를 추가해 친구들을 그룹에 초대해 보세요";
+"AddingGroupView301" = "태그관리";
+"AddingGroupView302" = "우리 그룹에 어울리는 항목을 선택하면 우리그룹과 보다 어울리는 그룹이 매칭됩니다";
+"AddingGroupView401" = "위치 관리";
+"AddingGroupView402" = "우리 그룹이 원하는 장소 고르세요!";
+"AddingGroupView501" = "날짜 과린";
+"AddingGroupView502" = "그룹방의 만료일을 설정해주세요";
+"AddingGroupView601" = "그룹소개";
+"AddingGroupView602" = "위 내용으로 어필하지 못한 우리 그룹의 장점을 자유롭게 표현해보세요";
+
+
+
+"AddingGroupStringView101" = "그룹이름";
+"AddingGroupStringView102" = "그룹이름을 적어주세요";
+"AddingGroupStringView201" = "대표문구";
+"AddingGRoupStringView202" = "어필할수 있는 짧은 문구";
+
+"ReportView001" = "무분별한 신고는 귀하의 서비스 이용에\n불편을 줄 수 있습니다.";
+"ReportView002" = "닫기";
+"ReportView101" = "부적절한 사진";
+"ReportView201" = "부적절한 내용";
+"ReportView301" = "스팸";
+"ReportView401" = "기타";
+
+
+
+"CurrentDeliView001" = "데일리 딜리 개수";
+"CurrentDeliView002" = "구매한 딜리 개수";
+"CurrentDeliView003" = "딜리가 부족하시다면 '딜리어스 플러스' 또는\n'딜리 구매'를 통해 더 많은친구를 만나보세요";
+
+"CurrentBoosterView001" = "보유한 부스터 개수";
+"CurrentBoosterView002" = "지금 사용하기";
+"CurrentBoosterView003" = "부스터는 1개만 보유가능합니다.";
+
+
+
+"SettingAccountView001" = "내 계정";
+"SettingAccountView101" = "이메일 계정";
+"SettingAccountView201" = "핸드폰 번호";
+"SettingAccountView301" = "서비스 이용 상태";
+
+"SettingLanguageView001" = "언어";
+"SettingLanguageView101" = "현재 서비스 언어";
+
+"SettingPushView001" = "푸쉬 알람";
+"SettingPushView101" = "매칭 & 채팅 알람";
+"SettingPushView201" = "딜리어스 알람";
+
+"SettingAppInfoView001" = "앱 정보";
+"SettingAppInfoView101" = "딜리어스 버전";
+"SettingAppInfoView201" = "공지사항";
+"SettingAppInfoView301" = "자주하는 질문";
+"SettingAppInfoView401" = "서비스 정보";
+
+
+
+
+"SettingServiceInfoView100" = "법적고지";
+"SettingServiceInfoView101" = "서비스 이용약관";
+"SettingServiceInfoView102" = "개인정보 취급방침";
+"SettingServiceInfoView103" = "위치서비스 이용약관";
+
+"SettingServiceInfoView200" = "라이센스";
+"SettingServiceInfoView201" = "라이센스";
+
+"SettingServiceInfoView300" = "회사정보";
+"SettingServiceInfoView301" = "회사소개";
+
+
