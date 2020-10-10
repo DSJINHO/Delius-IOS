@@ -11,6 +11,10 @@ extension String {
     func localize(bundle: Bundle = .main, tableName: String = "LocalizedString") -> String{
         return NSLocalizedString(self, tableName: tableName, value: "\(self)", comment: "")
     }
+    
+    func toLocal(bundle: Bundle = .main, tableName: String = "toLocal") -> String{
+        return NSLocalizedString(self, tableName: tableName, value: "\(self)", comment: "")
+    }
 }
 
 
