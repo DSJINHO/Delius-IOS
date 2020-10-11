@@ -35,5 +35,45 @@ extension UIButton{
         setTitleColor(color, for: .normal)
         backgroundColor = backColor
     }
+    func BtnBlackType(txt:String){
+        translatesAutoresizingMaskIntoConstraints = false
+        setTitle(txt, for: .normal)
+        self.titleLabel!.font = UIFont.DeliusBoldType6()
+        setTitleColor(.white, for: .normal)
+        backgroundColor = .black
+        
+        
+    }
+    func BtnWhiteType(txt:String){
+        translatesAutoresizingMaskIntoConstraints = false
+        setTitle(txt, for: .normal)
+        self.titleLabel!.font = UIFont.DeliusBoldType6()
+        setTitleColor(.black, for: .normal)
+        backgroundColor = .white
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 1
+    }
+    func BtnGrayType(txt:String){
+        translatesAutoresizingMaskIntoConstraints = false
+        setTitle(txt, for: .normal)
+        self.titleLabel!.font = UIFont.DeliusBoldType6()
+        setTitleColor(.white, for: .normal)
+        backgroundColor = .MainLightGrayColor()
+        self.titleLabel?.textColor = .white
+    }
+    func BtnWhiteTextGrayType(txt:String){
+        translatesAutoresizingMaskIntoConstraints = false
+        setTitle(txt, for: .normal)
+        self.titleLabel!.font = UIFont.DeliusBoldType2()
+        setTitleColor(.MainGrayColor(), for: .normal)
+        backgroundColor = .clear
+    }
+    func BtnImgTint(img:UIImage,tint:UIColor){
+        translatesAutoresizingMaskIntoConstraints = false
+        setImage(img, for: .normal)
+        tintColor = tint
+        contentMode = .scaleAspectFit
+    }
+
 }
 

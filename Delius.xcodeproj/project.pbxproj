@@ -426,6 +426,9 @@
 		CEBC934425026AE000C96C43 /* PurchaseSubBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC934325026AE000C96C43 /* PurchaseSubBtn.swift */; };
 		CEBC934625028D1000C96C43 /* PurchaseGradationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC934525028D1000C96C43 /* PurchaseGradationVIew.swift */; };
 		CEBC93482503ADB300C96C43 /* newImgStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC93472503ADB300C96C43 /* newImgStruct.swift */; };
+		CECF5BA12532ECB00062A1AF /* DeliusLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5B9E2532ECAD0062A1AF /* DeliusLogo.png */; };
+		CECF5BA22532ECB00062A1AF /* DeliusTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */; };
+		CECF5BA32532ECB00062A1AF /* DesignDelius.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5BA02532ECB00062A1AF /* DesignDelius.png */; };
 		CED5CEF6251FA6E900286769 /* GroupChatContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5CEF5251FA6E900286769 /* GroupChatContentDelegate.swift */; };
 		CED7042124C7070E00ABFAF4 /* AppSettingVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7042024C7070E00ABFAF4 /* AppSettingVersionView.swift */; };
 		CED7042324C710BB00ABFAF4 /* ShowAppVersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7042224C710BB00ABFAF4 /* ShowAppVersionVC.swift */; };
@@ -982,6 +985,9 @@
 		CEBC934325026AE000C96C43 /* PurchaseSubBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSubBtn.swift; sourceTree = "<group>"; };
 		CEBC934525028D1000C96C43 /* PurchaseGradationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseGradationVIew.swift; sourceTree = "<group>"; };
 		CEBC93472503ADB300C96C43 /* newImgStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newImgStruct.swift; sourceTree = "<group>"; };
+		CECF5B9E2532ECAD0062A1AF /* DeliusLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeliusLogo.png; sourceTree = "<group>"; };
+		CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeliusTitle.png; sourceTree = "<group>"; };
+		CECF5BA02532ECB00062A1AF /* DesignDelius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesignDelius.png; sourceTree = "<group>"; };
 		CED5CEF5251FA6E900286769 /* GroupChatContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatContentDelegate.swift; sourceTree = "<group>"; };
 		CED7042024C7070E00ABFAF4 /* AppSettingVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingVersionView.swift; sourceTree = "<group>"; };
 		CED7042224C710BB00ABFAF4 /* ShowAppVersionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAppVersionVC.swift; sourceTree = "<group>"; };
@@ -1486,6 +1492,9 @@
 				AA65EA1524909EEB00CEF861 /* ViewControllers */,
 				AAE6B3BE2313D94B001649D3 /* Delius.entitlements */,
 				AA0433A0230E7D1C0071C8F9 /* AppDelegate.swift */,
+				CECF5B9E2532ECAD0062A1AF /* DeliusLogo.png */,
+				CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */,
+				CECF5BA02532ECB00062A1AF /* DesignDelius.png */,
 				AA0433A4230E7D1D0071C8F9 /* Main.storyboard */,
 				AA0433AA230E7D230071C8F9 /* Assets.xcassets */,
 				AAC6752B230E86540070EDCD /* onlyU.png */,
@@ -3164,6 +3173,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECF5BA22532ECB00062A1AF /* DeliusTitle.png in Resources */,
+				CECF5BA32532ECB00062A1AF /* DesignDelius.png in Resources */,
+				CECF5BA12532ECB00062A1AF /* DeliusLogo.png in Resources */,
 				2BC656EA24B5CA72002F464A /* Assets.xcassets in Resources */,
 				2BC656E924B5CA69002F464A /* onlyU.png in Resources */,
 				2BC656E824B5CA63002F464A /* Main.storyboard in Resources */,
@@ -3912,7 +3924,7 @@
 				CODE_SIGN_ENTITLEMENTS = Delius/Delius.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86SUVAPQR4;
+				DEVELOPMENT_TEAM = 5U59C6NBS8;
 				INFOPLIST_FILE = Delius/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4021,7 +4033,7 @@
 				CODE_SIGN_ENTITLEMENTS = Delius/Delius.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86SUVAPQR4;
+				DEVELOPMENT_TEAM = 5U59C6NBS8;
 				INFOPLIST_FILE = Delius/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
