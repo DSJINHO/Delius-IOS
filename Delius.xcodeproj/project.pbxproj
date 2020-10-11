@@ -429,6 +429,7 @@
 		CECF5BA12532ECB00062A1AF /* DeliusLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5B9E2532ECAD0062A1AF /* DeliusLogo.png */; };
 		CECF5BA22532ECB00062A1AF /* DeliusTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */; };
 		CECF5BA32532ECB00062A1AF /* DesignDelius.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5BA02532ECB00062A1AF /* DesignDelius.png */; };
+		CECF5BA52533143D0062A1AF /* LoginTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5BA42533143D0062A1AF /* LoginTF.swift */; };
 		CED5CEF6251FA6E900286769 /* GroupChatContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5CEF5251FA6E900286769 /* GroupChatContentDelegate.swift */; };
 		CED7042124C7070E00ABFAF4 /* AppSettingVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7042024C7070E00ABFAF4 /* AppSettingVersionView.swift */; };
 		CED7042324C710BB00ABFAF4 /* ShowAppVersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7042224C710BB00ABFAF4 /* ShowAppVersionVC.swift */; };
@@ -988,6 +989,7 @@
 		CECF5B9E2532ECAD0062A1AF /* DeliusLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeliusLogo.png; sourceTree = "<group>"; };
 		CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeliusTitle.png; sourceTree = "<group>"; };
 		CECF5BA02532ECB00062A1AF /* DesignDelius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesignDelius.png; sourceTree = "<group>"; };
+		CECF5BA42533143D0062A1AF /* LoginTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTF.swift; sourceTree = "<group>"; };
 		CED5CEF5251FA6E900286769 /* GroupChatContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatContentDelegate.swift; sourceTree = "<group>"; };
 		CED7042024C7070E00ABFAF4 /* AppSettingVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingVersionView.swift; sourceTree = "<group>"; };
 		CED7042224C710BB00ABFAF4 /* ShowAppVersionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAppVersionVC.swift; sourceTree = "<group>"; };
@@ -2002,6 +2004,7 @@
 				2B2D7DA524A479EA00267113 /* UnderBarTextField.swift */,
 				AA65EA8624909EF900CEF861 /* BorderTextField.swift */,
 				AA65EC252490CE4B00CEF861 /* LoginTextField.swift */,
+				CECF5BA42533143D0062A1AF /* LoginTF.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -3438,6 +3441,7 @@
 				CEB10C3B24EB042300B97360 /* WaitGroupProfileView.swift in Sources */,
 				AA65EBC924909F0100CEF861 /* PermissionView.swift in Sources */,
 				CE3053B824FE7E72008CCDA6 /* PushVoteGroup3View.swift in Sources */,
+				CECF5BA52533143D0062A1AF /* LoginTF.swift in Sources */,
 				AA65EB6624909F0100CEF861 /* CustomerCenterVC.swift in Sources */,
 				2B2D7D9C24A352A900267113 /* MainService.swift in Sources */,
 				CED7042D24C7381F00ABFAF4 /* AppSettingStatusView.swift in Sources */,
