@@ -21,6 +21,11 @@ class LoginVC:UIViewController{
         sample()
         setView()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        //loginView.openAimation()
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -38,8 +43,6 @@ class LoginVC:UIViewController{
         loginView.signupBtn.addTarget(self, action: #selector(signupFunc(_:)), for: .touchUpInside)
         loginView.findAccountBtn.addTarget(self, action: #selector(findAccountFunc(_:)), for: .touchUpInside)
         loginView.loginBtn.addTarget(self, action: #selector(loginBtnFunc(_:)), for: .touchUpInside)
-        loginView.EmailEdt.textField.addTarget(self, action: #selector(emailTFFunc(textField:)), for: .touchDown)
-        loginView.PasswordEdt.textField.addTarget(self, action: #selector(passwordTFFunc(textField:)), for: .touchDown)
         
         loginView.EmailEdt.textField.delegate = self
         loginView.PasswordEdt.textField.delegate = self
@@ -70,9 +73,8 @@ class LoginVC:UIViewController{
         let email = loginView.EmailEdt.textField.text
         let password = loginView.PasswordEdt.textField.text
         
-        if email == nil || password == nil || email?.count == 0 || password?.count == 0{
-            ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView900".toLocal())
-            sender.isEnabled = true
+        if email == nil || password == nil{
+            ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView900".localize())
         }else{
             let indicator = ShowMainIndicator(viewController: self)
             indicator.ShowIndicator()
@@ -90,13 +92,13 @@ class LoginVC:UIViewController{
                     guard let strCode = code["type"] as? String else{ return }
                     switch strCode{
                     case "invalidEmail":
-                        ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView901".toLocal())
+                        ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView901".localize())
                     case "userDisabled":
-                        ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView902".toLocal())
+                        ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView902".localize())
                     case "wrongPassword":
-                        ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView903".toLocal())
+                        ShowAlert.OnlyDefault(vc: self, title: "", message: "LoginView903".localize())
                     case "etc":
-                        ShowAlert.OnlyDefault(vc: self, title: "Error", message: "LoginView904".toLocal())
+                        ShowAlert.OnlyDefault(vc: self, title: "Error", message: "LoginView904".localize())
                     case "complete":
                         self.goMain()
                     case "requireProfile":
@@ -108,7 +110,7 @@ class LoginVC:UIViewController{
                             self.goListenerSignup()
                         })
                     default:
-                        ShowAlert.OnlyDefault(vc: self, title: "Error", message: "LoginView904".toLocal())
+                        ShowAlert.OnlyDefault(vc: self, title: "Error", message: "LoginView904".localize())
                     }
                     sender.isEnabled = true
                 })
@@ -135,7 +137,8 @@ class LoginVC:UIViewController{
     
     @objc func signupFunc(_ sender:UIButton){
         
-        let vc = TermVC()
+        let vc = SignupVC()
+        vc.setView(type: "phone")
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: {})
         
@@ -148,16 +151,6 @@ class LoginVC:UIViewController{
         present(vc, animated: true, completion: {})
         
     }
-    @objc func emailTFFunc(textField: UITextField){
-        
-        loginView.EmailEdt.underline.layer.borderColor = UIColor.systemYellow.cgColor
-        loginView.PasswordEdt.underline.layer.borderColor = UIColor.MainGrayColor().cgColor
-    }
-    @objc func passwordTFFunc(textField: UITextField){
-        loginView.EmailEdt.underline.layer.borderColor = UIColor.MainGrayColor().cgColor
-        loginView.PasswordEdt.underline.layer.borderColor = UIColor.systemYellow.cgColor
-    }
-    
     
     
 }
@@ -166,10 +159,5 @@ extension LoginVC:UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    func keyboardWillShow(_ sender: Notification) {
-        self.view.frame.origin.y = -150
-    }
-    func keyboardWillHide(_ sender: Notification) {
-        self.view.frame.origin.y = 0
-    }
+    
 }
