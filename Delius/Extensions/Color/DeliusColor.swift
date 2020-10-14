@@ -85,6 +85,10 @@ extension UIColor{
     class func MainWhiteColor()->UIColor{
         return UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
     }
+    ///노랑
+    class func MainYellowColor()->UIColor{
+        return UIColor(red: 251/255.0, green: 192/255.0, blue: 45/255.0, alpha: 1.0)
+    }
     
     
 ///전체 그라데이션 컬러

@@ -32,41 +32,27 @@ class CurrentDeliView:UIView{
     let dailyDeliLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.font = UIFont.DeliusBoldType7()
+        l.font = UIFont.DeliusSystemType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
-        l.text = "CurrentDeliView001".localize()
+        l.textColor = .MainBlackColor()
+        l.text = "CurrentDeliView101".toLocal()
         return l
     }()
     let buyDeliLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.font = UIFont.DeliusBoldType7()
+        l.font = UIFont.DeliusSystemType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
-        l.text = "CurrentDeliView002".localize()
+        l.textColor = .MainBlackColor()
+        l.text = "CurrentDeliView102".toLocal()
         return l
     }()
-    let lineView1:UIView={
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .MainLightGrayColor2()
-        return v
-    }()
-    
-    let lineView2:UIView={
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .MainLightGrayColor2()
-        return v
-    }()
-    
     var dailyCountLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.font = UIFont.DeliusBoldType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
+        l.textColor = UIColor.MainBlackColor()
         return l
     }()
     var buyCountLabel:UILabel={
@@ -74,25 +60,48 @@ class CurrentDeliView:UIView{
         l.translatesAutoresizingMaskIntoConstraints = false
         l.font = UIFont.DeliusBoldType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
+        l.textColor = UIColor.MainBlackColor()
+        return l
+    }()
+    let lineView1:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .MainLightGrayColor()
+        return v
+    }()
+    
+    private let timeTitleLabel:UILabel={
+        let l = UILabel()
+        l.translatesAutoresizingMaskIntoConstraints = false
+        l.textColor = UIColor.MainBlackColor()
+        l.font = UIFont.DeliusSystemType5()
+        l.textAlignment = .center
+        l.text = "다음 데일리 딜리 제공시간"
         return l
     }()
     
     var timeCountLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.font = UIFont.DeliusBoldType7()
+        l.textColor = UIColor.MainYellowColor()
+        l.font = UIFont.DeliusBoldType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
-        l.backgroundColor = UIColor.MainLightGrayColor2()
         return l
     }()
+    
+    let lineView2:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .MainLightGrayColor()
+        return v
+    }()
+    
     var subLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.font = UIFont.DeliusSystemType2()
         l.textAlignment = .center
-        l.textColor = UIColor.MainLightGrayColor()
+        l.textColor = UIColor.MainBlackColor()
         l.numberOfLines = 0
         l.lineBreakMode = .byWordWrapping
         l.text = "CurrentDeliView003".localize()
@@ -101,12 +110,20 @@ class CurrentDeliView:UIView{
     var closeBtn:UIButton={
         let b = UIButton()
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle("구매하기", for: .normal)
-        b.setTitleColor(UIColor.MainGrayColor(), for: .normal)
+        b.setTitle("닫기", for: .normal)
+        b.setTitleColor(UIColor.MainBlackColor(), for: .normal)
         b.titleLabel!.font = UIFont.DeliusBoldType2()
         b.contentHorizontalAlignment = .center
         return b
     }()
+    
+    let lineView3:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .MainLightGrayColor()
+        return v
+    }()
+    
     var nsCenter:NSLayoutConstraint!
     required init?(coder: NSCoder) {
         super.init(coder:coder)
@@ -121,9 +138,9 @@ class CurrentDeliView:UIView{
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .clear
-        let wd = (frame.width - 120)
+        let wd = (frame.width - 60)
         let btnWidth = wd/4
-        let viewHeight:CGFloat = 170 + btnWidth*1.7
+        let viewHeight:CGFloat = 250 + btnWidth*2
         //let btnFrame = CGRect(x:0,y:0,width:btnWidth,height:btnWidth)
         setup(wd: wd, btnWidth: btnWidth, viewHeight: viewHeight)
     }
@@ -143,9 +160,9 @@ class CurrentDeliView:UIView{
         
         whiteView.addSubview(imgView)
         imgView.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor).isActive = true
-        imgView.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        imgView.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        imgView.topAnchor.constraint(equalTo: whiteView.topAnchor, constant: 20).isActive = true
+        imgView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        imgView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        imgView.topAnchor.constraint(equalTo: whiteView.topAnchor, constant: 30).isActive = true
         
         whiteView.addSubview(dailyDeliLabel)
         dailyDeliLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
@@ -163,43 +180,55 @@ class CurrentDeliView:UIView{
         dailyCountLabel.topAnchor.constraint(equalTo: dailyDeliLabel.bottomAnchor).isActive = true
         dailyCountLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         dailyCountLabel.rightAnchor.constraint(equalTo: whiteView.centerXAnchor).isActive = true
-        dailyCountLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        dailyCountLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         whiteView.addSubview(buyCountLabel)
         buyCountLabel.topAnchor.constraint(equalTo: dailyCountLabel.topAnchor).isActive = true
         buyCountLabel.leftAnchor.constraint(equalTo: whiteView.centerXAnchor).isActive = true
         buyCountLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        buyCountLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        buyCountLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         whiteView.addSubview(lineView1)
-        lineView1.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor).isActive = true
-        lineView1.widthAnchor.constraint(equalToConstant: 1).isActive = true
-        lineView1.topAnchor.constraint(equalTo: buyCountLabel.topAnchor, constant: 10).isActive = true
-        lineView1.bottomAnchor.constraint(equalTo: buyCountLabel.bottomAnchor, constant: -10).isActive = true
+        lineView1.topAnchor.constraint(equalTo: buyCountLabel.bottomAnchor, constant: 10).isActive = true
+        lineView1.leftAnchor.constraint(equalTo: whiteView.leftAnchor, constant: 30).isActive = true
+        lineView1.rightAnchor.constraint(equalTo: whiteView.rightAnchor, constant: -30).isActive = true
+        lineView1.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        whiteView.addSubview(timeTitleLabel)
+        timeTitleLabel.topAnchor.constraint(equalTo: lineView1.bottomAnchor, constant: 15).isActive = true
+        timeTitleLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
+        timeTitleLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
+        timeTitleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         whiteView.addSubview(timeCountLabel)
-        timeCountLabel.topAnchor.constraint(equalTo: buyCountLabel.bottomAnchor,constant: 5).isActive = true
+        timeCountLabel.topAnchor.constraint(equalTo: timeTitleLabel.bottomAnchor).isActive = true
         timeCountLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         timeCountLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        timeCountLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        timeCountLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        whiteView.addSubview(lineView2)
+        lineView2.topAnchor.constraint(equalTo: timeCountLabel.bottomAnchor, constant: 10).isActive = true
+        lineView2.leftAnchor.constraint(equalTo: whiteView.leftAnchor, constant: 30).isActive = true
+        lineView2.rightAnchor.constraint(equalTo: whiteView.rightAnchor, constant: -30).isActive = true
+        lineView2.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         whiteView.addSubview(subLabel)
-        subLabel.topAnchor.constraint(equalTo: timeCountLabel.bottomAnchor, constant: 5).isActive = true
+        subLabel.topAnchor.constraint(equalTo: lineView2.bottomAnchor, constant: 15).isActive = true
         subLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         subLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
         subLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        whiteView.addSubview(lineView2)
-        lineView2.topAnchor.constraint(equalTo: subLabel.bottomAnchor, constant: 5).isActive = true
-        lineView2.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
-        lineView2.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        lineView2.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
         whiteView.addSubview(closeBtn)
-        closeBtn.topAnchor.constraint(equalTo: lineView2.bottomAnchor).isActive = true
+        closeBtn.centerYAnchor.constraint(equalTo: whiteView.bottomAnchor, constant: -25).isActive = true
         closeBtn.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         closeBtn.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        closeBtn.bottomAnchor.constraint(equalTo: whiteView.bottomAnchor).isActive = true
+        closeBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        whiteView.addSubview(lineView3)
+        lineView3.bottomAnchor.constraint(equalTo: closeBtn.centerYAnchor, constant: -25).isActive = true
+        lineView3.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
+        lineView3.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
+        lineView3.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
     }
     

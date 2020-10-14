@@ -368,7 +368,7 @@
 
 "CurrentDeliView001" = "데일리 딜리 개수";
 "CurrentDeliView002" = "구매한 딜리 개수";
-"CurrentDeliView003" = "딜리가 부족하시다면 '딜리어스 플러스' 또는\n'딜리 구매'를 통해 더 많은친구를 만나보세요";
+"CurrentDeliView003" = "딜리가 부족하시다면 ‘딜리어스 플러스’ 또는\n‘딜리 구매’를 통해 더 많은 상대를 만나보세요.";
 
 "CurrentBoosterView001" = "보유한 부스터 개수";
 "CurrentBoosterView002" = "지금 사용하기";

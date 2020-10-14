@@ -16,11 +16,12 @@ class UpdateDeliTimeCount{
         let calendar = Calendar.current
         let todayDate = Date()
         var fromSeconds = from
-        
+        ///수정
         if from + 86400 < Int64(todayDate.timeIntervalSince1970){
-            label.text = "딜리로 표현하세요"
+            label.text = "01:00:00"
             return
         }
+        ///
 
         let fromDate = Date.init(timeIntervalSince1970: Double(fromSeconds + 86400))
         let components = calendar.dateComponents([.hour,.minute,.second], from: todayDate, to: fromDate)

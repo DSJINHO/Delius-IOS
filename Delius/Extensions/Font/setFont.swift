@@ -34,7 +34,9 @@ extension UIFont{
     class func DeliusBoldType7()-> UIFont{
         return UIFont.boldSystemFont(ofSize: 12)
     }
-    
+    class func DeliusBoldType8()->UIFont{
+        return UIFont.boldSystemFont(ofSize: 24)
+    }
     
     
     
