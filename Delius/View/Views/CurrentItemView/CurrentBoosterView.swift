@@ -33,9 +33,9 @@ class CurrentBoosterView:UIView{
     let titleLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.font = UIFont.DeliusBoldType7()
+        l.font = UIFont.DeliusSystemType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
+        l.textColor = .MainBlackColor()
         l.text = "CurrentBoosterView001".localize()
         return l
     }()
@@ -44,20 +44,33 @@ class CurrentBoosterView:UIView{
         l.translatesAutoresizingMaskIntoConstraints = false
         l.font = UIFont.DeliusBoldType5()
         l.textAlignment = .center
-        l.textColor = UIColor.MainGrayColor()
+        l.textColor = UIColor.MainBlackColor()
+        l.text = "0"
         return l
     }()
-    var gradationView:MainGradientView!
+    var gradationView:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = UIColor.MainPurpleColor()
+//        v.clipsToBounds = true
+        v.layer.cornerRadius = 25
+        v.layer.shadowColor = UIColor.MainBlackColor().cgColor
+        v.layer.shadowOffset = CGSize(width: 2, height: 2)
+        v.layer.shadowOpacity = 0.3
+        
+        return v
+    }()
     var useBtn:UIButton={
         let b = UIButton()
         b.translatesAutoresizingMaskIntoConstraints = false
         b.backgroundColor = .clear
-        b.titleLabel?.font! = UIFont.DeliusBoldType6()
+        b.titleLabel?.font! = UIFont.DeliusBoldType1()
         b.setTitle("CurrentBoosterView002".localize(), for: .normal)
         b.setTitleColor(.white, for: .normal)
         b.tintColor = UIColor.white
         return b
     }()
+    
     let subLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +83,7 @@ class CurrentBoosterView:UIView{
     let lineView1:UIView={
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .MainLightGrayColor2()
+        v.backgroundColor = .MainLightGrayColor()
         return v
     }()
     var closeBtn:UIButton={
@@ -96,10 +109,9 @@ class CurrentBoosterView:UIView{
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .clear
-        gradationView = MainGradientView(frame: CGRect(x: 0, y: 0, width: frame.width - 120, height: 45))
-        let wd = (frame.width - 120)
+        let wd = (frame.width - 60)
         let btnWidth = wd/4
-        let viewHeight:CGFloat = 170 + btnWidth*1.7
+        let viewHeight:CGFloat = 250 + btnWidth*2
         //let btnFrame = CGRect(x:0,y:0,width:btnWidth,height:btnWidth)
         setup(wd: wd, btnWidth: btnWidth, viewHeight: viewHeight)
     }
@@ -119,51 +131,52 @@ class CurrentBoosterView:UIView{
         
         whiteView.addSubview(imgView)
         imgView.centerXAnchor.constraint(equalTo: whiteView.centerXAnchor).isActive = true
-        imgView.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        imgView.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        imgView.topAnchor.constraint(equalTo: whiteView.topAnchor, constant: 20).isActive = true
+        imgView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        imgView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        imgView.topAnchor.constraint(equalTo: whiteView.topAnchor, constant: 30).isActive = true
         
         whiteView.addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: imgView.bottomAnchor,constant: 15).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: imgView.bottomAnchor, constant: 15).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         whiteView.addSubview(boosterCountLabel)
         boosterCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
         boosterCountLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         boosterCountLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        boosterCountLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        boosterCountLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         whiteView.addSubview(gradationView)
-        gradationView.topAnchor.constraint(equalTo: boosterCountLabel.bottomAnchor).isActive = true
-        gradationView.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
-        gradationView.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        gradationView.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        gradationView.topAnchor.constraint(equalTo: boosterCountLabel.bottomAnchor, constant: 10).isActive = true
+        gradationView.leftAnchor.constraint(equalTo: whiteView.leftAnchor, constant: 30).isActive = true
+        gradationView.rightAnchor.constraint(equalTo: whiteView.rightAnchor, constant: -30).isActive = true
+        gradationView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         whiteView.addSubview(useBtn)
         useBtn.topAnchor.constraint(equalTo: gradationView.topAnchor).isActive = true
         useBtn.leftAnchor.constraint(equalTo: gradationView.leftAnchor).isActive = true
         useBtn.rightAnchor.constraint(equalTo: gradationView.rightAnchor).isActive = true
-        useBtn.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        useBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         whiteView.addSubview(subLabel)
-        subLabel.topAnchor.constraint(equalTo: useBtn.bottomAnchor, constant: 5).isActive = true
+        subLabel.topAnchor.constraint(equalTo: useBtn.bottomAnchor, constant: 25).isActive = true
         subLabel.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         subLabel.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
         subLabel.heightAnchor.constraint(equalToConstant: 27).isActive = true
         
+        whiteView.addSubview(closeBtn)
+        closeBtn.centerYAnchor.constraint(equalTo: whiteView.bottomAnchor, constant: -25).isActive = true
+        closeBtn.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
+        closeBtn.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
+        closeBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         whiteView.addSubview(lineView1)
-        lineView1.topAnchor.constraint(equalTo: subLabel.bottomAnchor, constant: 5).isActive = true
+        lineView1.bottomAnchor.constraint(equalTo: closeBtn.centerYAnchor, constant: -25).isActive = true
         lineView1.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
         lineView1.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
         lineView1.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
-        whiteView.addSubview(closeBtn)
-        closeBtn.topAnchor.constraint(equalTo: lineView1.bottomAnchor).isActive = true
-        closeBtn.leftAnchor.constraint(equalTo: whiteView.leftAnchor).isActive = true
-        closeBtn.rightAnchor.constraint(equalTo: whiteView.rightAnchor).isActive = true
-        closeBtn.bottomAnchor.constraint(equalTo: whiteView.bottomAnchor).isActive = true
         
     }
     
