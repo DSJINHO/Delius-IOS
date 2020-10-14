@@ -89,9 +89,25 @@ extension UIColor{
     class func MainYellowColor()->UIColor{
         return UIColor(red: 251/255.0, green: 192/255.0, blue: 45/255.0, alpha: 1.0)
     }
+    ///찐노랑
+    class func MainYellowColor2()->UIColor{
+        return UIColor(red: 254/255.0, green: 185/255.0, blue: 99/255.0, alpha: 1.0)
+    }
+    ///분홍
+    class func MainPinkColor()->UIColor{
+        return UIColor(red: 255/255.0, green: 128/255.0, blue: 161/255.0, alpha: 1.0)
+    }
+    ///연분홍
+    class func MainPinkColor2()->UIColor{
+        return UIColor(red: 251/255.0, green: 194/255.0, blue: 235/255.0, alpha: 1.0)
+    }
     ///보라
     class func MainPurpleColor()->UIColor{
         return UIColor(red: 180/255.0, green: 153/255.0, blue: 255/255.0, alpha: 1.0)
+    }
+    ///찐보라
+    class func MainPurpleColor2()->UIColor{
+        return UIColor(red: 104/255.0, green: 107/255.0, blue: 172/255.0, alpha: 1.0)
     }
     
     

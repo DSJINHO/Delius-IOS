@@ -22,6 +22,7 @@ class PurchaseDeliVC:UIViewController,SKProductsRequestDelegate{
     
     var contentView:PurchaseDeliView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

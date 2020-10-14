@@ -11,9 +11,9 @@ class DeliGradationView: UIView{
     
     var gradientLayer: CAGradientLayer = {
         let layer = CAGradientLayer()
-        layer.colors = [UIColor.MainColor().cgColor,UIColor.MainColor().withAlphaComponent(0.6).cgColor]
+        layer.colors = [UIColor.MainPinkColor2().cgColor,UIColor.MainPinkColor().withAlphaComponent(1).cgColor]
         layer.startPoint = CGPoint.zero
-        layer.endPoint = CGPoint(x: 0, y: 1)
+        layer.endPoint = CGPoint(x: 1, y: 0)
         return layer
     }()
     

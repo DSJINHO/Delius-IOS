@@ -16,7 +16,7 @@ class PurchaseDeliCell:UICollectionViewCell{
         v.layer.shadowColor = UIColor.blackType3().cgColor
         v.layer.shadowOffset = CGSize(width: 2, height: 2)
         v.layer.shadowRadius = 3
-        v.layer.shadowOpacity = 0.7
+        v.layer.shadowOpacity = 0.3
         return v
     }()
     var imgView:UIImageView={
@@ -29,15 +29,15 @@ class PurchaseDeliCell:UICollectionViewCell{
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = UIColor.blackType1()
-        l.font = UIFont.boldSystemFont(ofSize: 21)
+        l.font = UIFont.DeliusBoldType1()
         l.textAlignment = .center
         return l
     }()
     var subLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor.blackType2()
-        l.font = UIFont.systemFont(ofSize: 14)
+        l.textColor = UIColor.blackType1()
+        l.font = UIFont.DeliusSystemType4()
         l.textAlignment = .center
         l.numberOfLines = 2
         l.lineBreakMode = .byWordWrapping
@@ -52,7 +52,7 @@ class PurchaseDeliCell:UICollectionViewCell{
     }
     private func setup(){
         self.addSubview(circleView)
-        circleView.topAnchor.constraint(equalTo: topAnchor, constant: 70).isActive = true
+        circleView.topAnchor.constraint(equalTo: topAnchor, constant: 60).isActive = true
         circleView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         circleView.widthAnchor.constraint(equalToConstant: 60).isActive = true
         circleView.heightAnchor.constraint(equalToConstant: 60).isActive = true
@@ -70,7 +70,7 @@ class PurchaseDeliCell:UICollectionViewCell{
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor,constant: -30).isActive = true
         
         self.addSubview(subLabel)
-        subLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15).isActive = true
+        subLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
         subLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 30).isActive = true
         subLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -30).isActive = true
         subLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
