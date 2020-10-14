@@ -66,7 +66,7 @@ class MenuView:UIView{
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = .white
-        v.layer.cornerRadius = 74
+        v.layer.cornerRadius = 72
         v.layer.masksToBounds = false
         return v
     }()
@@ -317,8 +317,8 @@ class MenuView:UIView{
         
         
 //        let profileViewHeight = width/5*2
-        let profileViewHeight:CGFloat = 148
-        let profileImgHeight:CGFloat = 148
+        let profileViewHeight:CGFloat = 146
+        let profileImgHeight:CGFloat = 146
         
         self.addSubview(profileView)
         profileView.topAnchor.constraint(equalTo: profileLabel.bottomAnchor, constant: 10).isActive = true
@@ -334,7 +334,7 @@ class MenuView:UIView{
         profileBackView.leftAnchor.constraint(equalTo: profileView.leftAnchor, constant: 45).isActive = true
         
         
-        profileImgView.layer.cornerRadius = (profileImgHeight-8)/2
+        profileImgView.layer.cornerRadius = (profileImgHeight-6)/2
         profileBackView.addSubview(profileImgView)
         profileImgView.topAnchor.constraint(equalTo: profileBackView.topAnchor, constant: 2).isActive = true
         profileImgView.leftAnchor.constraint(equalTo: profileBackView.leftAnchor, constant: 2).isActive = true
@@ -434,7 +434,7 @@ class MenuView:UIView{
         
         scrollView.contentSize = CGSize(width:0,height:900)
         self.addSubview(scrollView)
-        scrollView.topAnchor.constraint(equalTo: topAnchor,constant: topPadding + 80).isActive = true
+        scrollView.topAnchor.constraint(equalTo: topAnchor,constant: topPadding + 90).isActive = true
         scrollView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -626,14 +626,14 @@ class MenuView:UIView{
         profileView.addSubview(profileBackView)
         profileBackView.topAnchor.constraint(equalTo: profileView.topAnchor, constant: 10).isActive = true
         profileBackView.centerXAnchor.constraint(equalTo: profileView.centerXAnchor).isActive = true
-        profileBackView.widthAnchor.constraint(equalToConstant: 148).isActive = true
-        profileBackView.heightAnchor.constraint(equalToConstant: 148).isActive = true
+        profileBackView.widthAnchor.constraint(equalToConstant: 146).isActive = true
+        profileBackView.heightAnchor.constraint(equalToConstant: 146).isActive = true
         
         profileBackView.addSubview(profileImgView)
-        profileImgView.topAnchor.constraint(equalTo: profileBackView.topAnchor, constant: 8).isActive = true
-        profileImgView.leftAnchor.constraint(equalTo: profileBackView.leftAnchor,constant: 8).isActive = true
-        profileImgView.rightAnchor.constraint(equalTo: profileBackView.rightAnchor, constant: -8).isActive = true
-        profileImgView.bottomAnchor.constraint(equalTo: profileBackView.bottomAnchor, constant: -8).isActive = true
+        profileImgView.topAnchor.constraint(equalTo: profileBackView.topAnchor, constant: 6).isActive = true
+        profileImgView.leftAnchor.constraint(equalTo: profileBackView.leftAnchor,constant: 6).isActive = true
+        profileImgView.rightAnchor.constraint(equalTo: profileBackView.rightAnchor, constant: -6).isActive = true
+        profileImgView.bottomAnchor.constraint(equalTo: profileBackView.bottomAnchor, constant: -6).isActive = true
         
         profileView.addSubview(profileNameLabel)
         profileNameLabel.topAnchor.constraint(equalTo: profileImgView.bottomAnchor, constant: 20).isActive = true

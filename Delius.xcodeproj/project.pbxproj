@@ -58,6 +58,8 @@
 		2B74D53424B2F2E7007D459B /* ShowSendDeli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74D53324B2F2E7007D459B /* ShowSendDeli.swift */; };
 		2B74D53624B2FA33007D459B /* ShowCurrentDeli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74D53524B2FA33007D459B /* ShowCurrentDeli.swift */; };
 		2B74D53824B2FDA4007D459B /* ShowBuyDeliVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74D53724B2FDA4007D459B /* ShowBuyDeliVC.swift */; };
+		2B88DE372535F66F003878A0 /* MenuSubView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B88DE362535F66F003878A0 /* MenuSubView3.swift */; };
+		2B88DE392535F687003878A0 /* MenuSubView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B88DE382535F687003878A0 /* MenuSubView4.swift */; };
 		2B93D12D249A599D00C41F1C /* BuyPlusUserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93D12C249A599D00C41F1C /* BuyPlusUserButton.swift */; };
 		2B9A79A224ACABC300EC74A7 /* CreateThumbUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9A79A124ACABC300EC74A7 /* CreateThumbUrl.swift */; };
 		2B9A79A424ADAEC500EC74A7 /* MenuDefaultGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9A79A324ADAEC400EC74A7 /* MenuDefaultGroupView.swift */; };
@@ -430,6 +432,8 @@
 		CECF5BA22532ECB00062A1AF /* DeliusTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */; };
 		CECF5BA32532ECB00062A1AF /* DesignDelius.png in Resources */ = {isa = PBXBuildFile; fileRef = CECF5BA02532ECB00062A1AF /* DesignDelius.png */; };
 		CECF5BA52533143D0062A1AF /* LoginTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5BA42533143D0062A1AF /* LoginTF.swift */; };
+		CECF5BA72534672C0062A1AF /* PhoneEdtTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5BA62534672B0062A1AF /* PhoneEdtTextField.swift */; };
+		CECF5BAB2534749F0062A1AF /* VerifyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5BAA2534749F0062A1AF /* VerifyTextField.swift */; };
 		CED5CEF6251FA6E900286769 /* GroupChatContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5CEF5251FA6E900286769 /* GroupChatContentDelegate.swift */; };
 		CED7042124C7070E00ABFAF4 /* AppSettingVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7042024C7070E00ABFAF4 /* AppSettingVersionView.swift */; };
 		CED7042324C710BB00ABFAF4 /* ShowAppVersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7042224C710BB00ABFAF4 /* ShowAppVersionVC.swift */; };
@@ -603,6 +607,8 @@
 		2B74D53324B2F2E7007D459B /* ShowSendDeli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSendDeli.swift; sourceTree = "<group>"; };
 		2B74D53524B2FA33007D459B /* ShowCurrentDeli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCurrentDeli.swift; sourceTree = "<group>"; };
 		2B74D53724B2FDA4007D459B /* ShowBuyDeliVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBuyDeliVC.swift; sourceTree = "<group>"; };
+		2B88DE362535F66F003878A0 /* MenuSubView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSubView3.swift; sourceTree = "<group>"; };
+		2B88DE382535F687003878A0 /* MenuSubView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSubView4.swift; sourceTree = "<group>"; };
 		2B93D12C249A599D00C41F1C /* BuyPlusUserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPlusUserButton.swift; sourceTree = "<group>"; };
 		2B9A79A124ACABC300EC74A7 /* CreateThumbUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThumbUrl.swift; sourceTree = "<group>"; };
 		2B9A79A324ADAEC400EC74A7 /* MenuDefaultGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDefaultGroupView.swift; sourceTree = "<group>"; };
@@ -990,6 +996,8 @@
 		CECF5B9F2532ECAF0062A1AF /* DeliusTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeliusTitle.png; sourceTree = "<group>"; };
 		CECF5BA02532ECB00062A1AF /* DesignDelius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesignDelius.png; sourceTree = "<group>"; };
 		CECF5BA42533143D0062A1AF /* LoginTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTF.swift; sourceTree = "<group>"; };
+		CECF5BA62534672B0062A1AF /* PhoneEdtTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEdtTextField.swift; sourceTree = "<group>"; };
+		CECF5BAA2534749F0062A1AF /* VerifyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTextField.swift; sourceTree = "<group>"; };
 		CED5CEF5251FA6E900286769 /* GroupChatContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatContentDelegate.swift; sourceTree = "<group>"; };
 		CED7042024C7070E00ABFAF4 /* AppSettingVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingVersionView.swift; sourceTree = "<group>"; };
 		CED7042224C710BB00ABFAF4 /* ShowAppVersionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAppVersionVC.swift; sourceTree = "<group>"; };
@@ -2005,6 +2013,8 @@
 				AA65EA8624909EF900CEF861 /* BorderTextField.swift */,
 				AA65EC252490CE4B00CEF861 /* LoginTextField.swift */,
 				CECF5BA42533143D0062A1AF /* LoginTF.swift */,
+				CECF5BA62534672B0062A1AF /* PhoneEdtTextField.swift */,
+				CECF5BAA2534749F0062A1AF /* VerifyTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -2374,6 +2384,8 @@
 				AA65EAFC24909EFA00CEF861 /* MenuButtonWithImage.swift */,
 				AA65EAFD24909EFA00CEF861 /* MenuView.swift */,
 				AA65EC292490F4A100CEF861 /* MenuSubView2.swift */,
+				2B88DE362535F66F003878A0 /* MenuSubView3.swift */,
+				2B88DE382535F687003878A0 /* MenuSubView4.swift */,
 				2B9A79A324ADAEC400EC74A7 /* MenuDefaultGroupView.swift */,
 			);
 			path = MenuView;
@@ -3397,9 +3409,11 @@
 				AA65EBDF24909F0100CEF861 /* ProfileAuthView.swift in Sources */,
 				CEEF949E250B9E6C00B82596 /* CreateGroupDecisionAVC.swift in Sources */,
 				CEFCCC3C251E0057002F92FF /* FeedGroup2ProfileView.swift in Sources */,
+				2B88DE392535F687003878A0 /* MenuSubView4.swift in Sources */,
 				2BC656DF24B46D69002F464A /* ProfileEditInfoView.swift in Sources */,
 				CEFCCC35251BB565002F92FF /* RootViewProtocol.swift in Sources */,
 				2B4D322224964FDA00821BCD /* AddingGroupVC.swift in Sources */,
+				2B88DE372535F66F003878A0 /* MenuSubView3.swift in Sources */,
 				2BAB23EE24A9B218004C14F6 /* CurrentBoosterView.swift in Sources */,
 				AA65EBD524909F0100CEF861 /* GroupSideNotiView.swift in Sources */,
 				2B4D323F24966F2B00821BCD /* groupAddingHeaderView.swift in Sources */,
@@ -3578,6 +3592,7 @@
 				AA65EBE024909F0100CEF861 /* ProfileBottomVIewType1.swift in Sources */,
 				CED84F9624E2912700FC66D4 /* SideGroupStruct.swift in Sources */,
 				AA65EBA424909F0100CEF861 /* MenuGroup4Cell.swift in Sources */,
+				CECF5BA72534672C0062A1AF /* PhoneEdtTextField.swift in Sources */,
 				AA65EBD024909F0100CEF861 /* GroupFilterView.swift in Sources */,
 				CE0F100C24F69098002B69FE /* DeleteGroupAlertVC.swift in Sources */,
 				AA65EBC624909F0100CEF861 /* SetAppInfoView.swift in Sources */,
@@ -3642,6 +3657,7 @@
 				CE0F104424F7C13D002B69FE /* GroupHideLikeListView.swift in Sources */,
 				CE65ECE424C308D500623092 /* AppSettingView.swift in Sources */,
 				AA65EBBF24909F0100CEF861 /* CircleButtonWithBackground.swift in Sources */,
+				CECF5BAB2534749F0062A1AF /* VerifyTextField.swift in Sources */,
 				AA65EB6C24909F0100CEF861 /* SoloChatVC.swift in Sources */,
 				AA65EBD324909F0100CEF861 /* ProfileInfoBottomView.swift in Sources */,
 				2BC656DB24B46D4B002F464A /* ProfileEditImagesView.swift in Sources */,
