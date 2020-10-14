@@ -275,15 +275,14 @@
 "MenuView201" = "그룹추가";
 
 "MenuView301" = "딜리어스 플러스";
-"MenuView302" = "딜리 구매하기";
-"MenuView303" = "부스터 구매하기";
-"MenuView401" = "검색 범위 설정하기";
+"MenuView302" = "딜리 구매";
+"MenuView303" = "부스터 구매";
+"MenuView401" = "검색 범위 설정";
 "MenuView402" = "사용자 차단";
 "MenuView3011" = "탭 하여 혜택보기";
 
 
-"MenuView401" = "검색 범위 설정하기";
-"MenuView402" = "사용자 차단하기";
+
 
 "MenuGroupView001" = "친구를 초대해 그룹을 만들어봐";
 

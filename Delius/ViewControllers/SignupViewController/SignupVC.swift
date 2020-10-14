@@ -280,8 +280,8 @@ class SignupVC: UIViewController {
             transitionToEmailView()
             topView.PhoneToEmailAnimation(wd: view.frame.width)
         case .EmailView:
-            let email = emailVC.emailAuthView.emailView.edt.text
-            let password = emailVC.emailAuthView.passwordView1.edt!.text
+            let email = emailVC.emailAuthView.emailTextField.textField.text
+            let password = emailVC.emailAuthView.passwordTextField.textField.text
             if email == nil || password == nil{
                 ShowAlert.OnlyDefault(vc: self, title: "Error", message: "Error")
                 return

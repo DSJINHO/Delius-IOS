@@ -230,7 +230,7 @@ class MenuVC: UIViewController {
         if let firstUserImgNames = firstUser.im{
             let url = CreateThumbUrl.mainImgUrl(uid: firstUser.uid!, imgObjs: firstUserImgNames)
             cell.imgView.sd_setImage(with: url)
-            cell.backView.sd_setImage(with: url)
+//            cell.backView.sd_setImage(with: url)
         }
         if let secondUserImgNames = secondUser.im{
             let url = CreateThumbUrl.mainImgUrl(uid: secondUser.uid!, imgObjs: secondUserImgNames)
@@ -239,14 +239,14 @@ class MenuVC: UIViewController {
         if let status = groupData.st{
             cell.stateLabel.text = status
         }
-        var userNames = ""
-        if let firstUserName = firstUser.na{
-            userNames = firstUserName
-        }
-        if let secondUserName = secondUser.na{
-            userNames = userNames + " / " + secondUserName
-        }
-        cell.memberNameLabel.text = userNames
+//        var userNames = ""
+//        if let firstUserName = firstUser.na{
+//            userNames = firstUserName
+//        }
+//        if let secondUserName = secondUser.na{
+//            userNames = userNames + " / " + secondUserName
+//        }
+//        cell.memberNameLabel.text = userNames
         if let groupName = groupData.na{
             cell.nameLabel.text = groupName
         }
@@ -266,7 +266,7 @@ class MenuVC: UIViewController {
         if let firstUserImgNames = firstUser.im{
             let url = CreateThumbUrl.mainImgUrl(uid: firstUser.uid!, imgObjs: firstUserImgNames)
             cell.imgView.sd_setImage(with: url)
-            cell.backView.sd_setImage(with: url)
+//            cell.backView.sd_setImage(with: url)
         }
         if let secondUserImgNames = secondUser.im{
             let url = CreateThumbUrl.mainImgUrl(uid: secondUser.uid!, imgObjs: secondUserImgNames)
@@ -279,17 +279,17 @@ class MenuVC: UIViewController {
         if let status = groupData.st{
             cell.stateLabel.text = status
         }
-        var userNames = ""
-        if let firstUserName = firstUser.na{
-            userNames = firstUserName
-        }
-        if let secondUserName = secondUser.na{
-            userNames = userNames + " / " + secondUserName
-        }
-        if let thirdUserName = thirdUser.na{
-            userNames = userNames + " / " + thirdUserName
-        }
-        cell.memberNameLabel.text = userNames
+//        var userNames = ""
+//        if let firstUserName = firstUser.na{
+//            userNames = firstUserName
+//        }
+//        if let secondUserName = secondUser.na{
+//            userNames = userNames + " / " + secondUserName
+//        }
+//        if let thirdUserName = thirdUser.na{
+//            userNames = userNames + " / " + thirdUserName
+//        }
+//        cell.memberNameLabel.text = userNames
         if let groupName = groupData.na{
             cell.nameLabel.text = groupName
         }
@@ -310,7 +310,7 @@ class MenuVC: UIViewController {
         if let firstUserImgNames = firstUser.im{
             let url = CreateThumbUrl.mainImgUrl(uid: firstUser.uid!, imgObjs: firstUserImgNames)
             cell.imgView.sd_setImage(with: url)
-            cell.backView.sd_setImage(with: url)
+//            cell.backView.sd_setImage(with: url)
         }
         if let secondUserImgNames = secondUser.im{
             let url = CreateThumbUrl.mainImgUrl(uid: secondUser.uid!, imgObjs: secondUserImgNames)
@@ -327,20 +327,20 @@ class MenuVC: UIViewController {
         if let status = groupData.st{
             cell.stateLabel.text = status
         }
-        var userNames = ""
-        if let firstUserName = firstUser.na{
-            userNames = firstUserName
-        }
-        if let secondUserName = secondUser.na{
-            userNames = userNames + " / " + secondUserName
-        }
-        if let thirdUserName = thirdUser.na{
-            userNames = userNames + " / " + thirdUserName
-        }
-        if let fourthUserName = fourthUser.na{
-            userNames = userNames + " / " + fourthUserName
-        }
-        cell.memberNameLabel.text = userNames
+//        var userNames = ""
+//        if let firstUserName = firstUser.na{
+//            userNames = firstUserName
+//        }
+//        if let secondUserName = secondUser.na{
+//            userNames = userNames + " / " + secondUserName
+//        }
+//        if let thirdUserName = thirdUser.na{
+//            userNames = userNames + " / " + thirdUserName
+//        }
+//        if let fourthUserName = fourthUser.na{
+//            userNames = userNames + " / " + fourthUserName
+//        }
+//        cell.memberNameLabel.text = userNames
         if let groupName = groupData.na{
             cell.nameLabel.text = groupName
         }
@@ -396,7 +396,7 @@ extension MenuVC:UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width - 100
+        let width = collectionView.frame.width - 60
         return CGSize(width:width,height:collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

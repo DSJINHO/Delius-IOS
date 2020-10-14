@@ -12,7 +12,7 @@ class MenuSubView:UIButton{
     var txtLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor.MainGrayColor()
+        l.textColor = UIColor.MainBlackColor()
         l.font = UIFont.DeliusSystemType4()
         l.textAlignment = .left
         return l
@@ -22,7 +22,7 @@ class MenuSubView:UIButton{
         v.translatesAutoresizingMaskIntoConstraints = false
         v.image = UIImage(named:"RightArrow")
         v.contentMode = .scaleAspectFit
-        v.tintColor = UIColor.MainGrayColor()
+        v.tintColor = UIColor.MainBlackColor()
         return v
     }()
     required init?(coder:NSCoder){
@@ -43,7 +43,7 @@ class MenuSubView:UIButton{
         rightArrow.widthAnchor.constraint(equalToConstant: 15).isActive = true
         self.addSubview(txtLabel)
         txtLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        txtLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15).isActive = true
+        txtLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 30).isActive = true
         txtLabel.rightAnchor.constraint(equalTo: rightArrow.leftAnchor, constant: -10).isActive = true
         txtLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }

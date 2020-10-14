@@ -26,7 +26,7 @@ class PermissionVC: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: {})
         }else{
-            ShowAlert.OnlyDefault(vc: self, title: "tet", message: "text")
+            ShowAlert.OnlyDefault(vc: self, title: "PermissionView500".toLocal(), message: "PermissionView501".toLocal())
         }
     }
     @objc func tapFunc(_ sender:UIButton){

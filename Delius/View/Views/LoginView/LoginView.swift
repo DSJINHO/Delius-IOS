@@ -12,7 +12,7 @@ class LoginView: UIView{
     
     var cancelBtn:UIButton={
         let b = UIButton()
-        b.DeliusTeyp2(img: UIImage(named: "back")!, tint: .black)
+        b.DeliusTeyp2(img: UIImage(named: "LeftArrow")!, tint: .black)
         return b
     }()
     let titleImageView:UIView={

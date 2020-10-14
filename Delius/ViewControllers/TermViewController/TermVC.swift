@@ -44,7 +44,7 @@ class TermVC:UIViewController{
         
         contentView.nextBtn.addTarget(self, action: #selector(nextBtnFunc(_:)), for: .touchUpInside)
         contentView.backBtn.addTarget(self, action: #selector(backBtnFunc(_:)), for: .touchUpInside)
-        
+        contentView.bringSubviewToFront(contentView.topLabel1)
         
     }
     @objc func backBtnFunc(_ sender:UIButton){
@@ -68,7 +68,7 @@ class TermVC:UIViewController{
     }
     @objc func nextBtnFunc(_ sender:UIButton){
         if allCheck == .unchecked{
-            ShowAlert.OnlyDefault(vc: self, title: "TermView901", message: "TermView902")
+            ShowAlert.OnlyDefault(vc: self, title: "TermView901".toLocal(), message: "TermView902".toLocal())
             return
         }
         guard let pvc = self.presentingViewController else { return }
@@ -82,15 +82,15 @@ class TermVC:UIViewController{
     @objc func termBtnFunc(_ sender:UIButton){
         switch sender{
         case contentView.termBtn1:
-            guard let url = URL(string: "https://zeddios.tistory.com") else { return }
+            guard let url = URL(string: "https://www.delius-company.com/policy/terms") else { return }
             let safariViewController = SFSafariViewController(url: url)
             present(safariViewController, animated: true, completion: nil)
         case contentView.termBtn2:
-            guard let url = URL(string: "https://zeddios.tistory.com") else { return }
+            guard let url = URL(string: "https://www.delius-company.com/policy/privacy") else { return }
             let safariViewController = SFSafariViewController(url: url)
             present(safariViewController, animated: true, completion: nil)
         case contentView.termBtn3:
-            guard let url = URL(string: "https://zeddios.tistory.com") else { return }
+            guard let url = URL(string: "https://www.delius-company.com/policy/location") else { return }
             let safariViewController = SFSafariViewController(url: url)
             present(safariViewController, animated: true, completion: nil)
         default:()
@@ -110,11 +110,13 @@ class TermVC:UIViewController{
     }
     private func updateButton(Button:UIButton,check:Bool){
         if check{
-            Button.backgroundColor = .white
+            Button.layer.borderColor = UIColor.MainColor().cgColor
+            Button.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
             Button.tintColor = .MainColor()
         }else{
-            Button.backgroundColor = .clear
-            Button.tintColor = .white
+            Button.layer.borderColor = UIColor.black.cgColor
+            Button.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            Button.tintColor = .black
         }
         if Button == contentView.checkBtn1{
             Check1 = (check) ? .checked : .unchecked
@@ -135,16 +137,16 @@ class TermVC:UIViewController{
     private func updateCheck(){
         if Check1 == .checked && Check2 == .checked && Check3 == .checked{
             allCheck = .checked
-            contentView.allBtn.backgroundColor = .white
+            contentView.allBtn.layer.borderColor = UIColor.MainColor().cgColor
+            contentView.allBtn.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
             contentView.allBtn.tintColor = .MainColor()
-            contentView.nextBtn.backgroundColor = .white
-            contentView.nextBtn.tintColor = .MainColor()
+            contentView.nextBtn.backgroundColor = .black
         }else{
             allCheck = .unchecked
-            contentView.allBtn.backgroundColor = .clear
-            contentView.allBtn.tintColor = .white
-            contentView.nextBtn.backgroundColor = .clear
-            contentView.nextBtn.tintColor = .white
+            contentView.allBtn.layer.borderColor = UIColor.black.cgColor
+            contentView.allBtn.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            contentView.allBtn.tintColor = .black
+            contentView.nextBtn.backgroundColor = .MainLightGrayColor()
         }
     }
 }

@@ -46,29 +46,33 @@ class SignupPhoneVC: UIViewController {
         phoneAuthView.localPickerView.pickView.dataSource = self
         
         phoneAuthView.localPickerBtn.addTarget(self, action: #selector(localFunc(_:)), for: .touchUpInside)
+        phoneAuthView.sendPhoneEdt.textField.addTarget(self, action: #selector(phoneEdtFunc(_:)), for: .touchDown)
         
         
+        phoneAuthView.verifyEdtView.tf1.textField.delegate = self
+        phoneAuthView.verifyEdtView.tf2.textField.delegate = self
+        phoneAuthView.verifyEdtView.tf3.textField.delegate = self
+        phoneAuthView.verifyEdtView.tf4.textField.delegate = self
+        phoneAuthView.verifyEdtView.tf5.textField.delegate = self
+        phoneAuthView.verifyEdtView.tf6.textField.delegate = self
         
-        phoneAuthView.verifyEdtView.tf1.delegate = self
-        phoneAuthView.verifyEdtView.tf2.delegate = self
-        phoneAuthView.verifyEdtView.tf3.delegate = self
-        phoneAuthView.verifyEdtView.tf4.delegate = self
-        phoneAuthView.verifyEdtView.tf5.delegate = self
-        phoneAuthView.verifyEdtView.tf6.delegate = self
-        
-        phoneAuthView.verifyEdtView.tf1.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
-        phoneAuthView.verifyEdtView.tf2.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
-        phoneAuthView.verifyEdtView.tf3.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
-        phoneAuthView.verifyEdtView.tf4.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
-        phoneAuthView.verifyEdtView.tf5.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
-        phoneAuthView.verifyEdtView.tf6.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+        phoneAuthView.verifyEdtView.tf1.textField.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+        phoneAuthView.verifyEdtView.tf2.textField.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+        phoneAuthView.verifyEdtView.tf3.textField.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+        phoneAuthView.verifyEdtView.tf4.textField.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+        phoneAuthView.verifyEdtView.tf5.textField.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+        phoneAuthView.verifyEdtView.tf6.textField.addTarget(self, action: #selector(changeText(_:)), for: .editingChanged)
+    
+        phoneAuthView.sendSubviewToBack(phoneAuthView.point)
     }
+
+    
     @objc func sendFunc(_ sender:UIButton){
         
-        var phoneNumber = phoneAuthView.sendPhoneEdt.text
+        var phoneNumber = phoneAuthView.sendPhoneEdt.textField.text
         
         if phoneNumber == nil || phoneNumber?.count == 0{
-            ShowAlert.OnlyDefault(vc: self, title: "Error", message:"need phoneNumber")
+            ShowAlert.OnlyDefault(vc: self, title: "error".toLocal(), message:"PhoneAuthView005".toLocal())
             return
         }
         let intPhone = Int(phoneNumber!)
@@ -86,13 +90,16 @@ class SignupPhoneVC: UIViewController {
         phoneAuthView.sendPhoneEdt.resignFirstResponder()
         phoneAuthView.pickerViewAnimation(reverse: false)
     }
+    @objc func phoneEdtFunc(_ sender:UITextField){
+        phoneAuthView.sendPhoneEdt.underline.layer.borderColor = UIColor.MainColor().cgColor
+    }
     func verifyFunc(){
-        let A = phoneAuthView.verifyEdtView.tf1.text
-        let B = phoneAuthView.verifyEdtView.tf2.text
-        let C = phoneAuthView.verifyEdtView.tf3.text
-        let D = phoneAuthView.verifyEdtView.tf4.text
-        let E = phoneAuthView.verifyEdtView.tf5.text
-        let F = phoneAuthView.verifyEdtView.tf6.text
+        let A = phoneAuthView.verifyEdtView.tf1.textField.text
+        let B = phoneAuthView.verifyEdtView.tf2.textField.text
+        let C = phoneAuthView.verifyEdtView.tf3.textField.text
+        let D = phoneAuthView.verifyEdtView.tf4.textField.text
+        let E = phoneAuthView.verifyEdtView.tf5.textField.text
+        let F = phoneAuthView.verifyEdtView.tf6.textField.text
         if A == nil || A?.count == 0 || B == nil || B?.count == 0 || C == nil || C?.count == 0 || D == nil || D?.count == 0 ||  E == nil || E?.count == 0 || F == nil || F?.count == 0{
             ShowAlert.OnlyDefault(vc: self, title: "Empty", message: "asdf")
             return
@@ -102,41 +109,50 @@ class SignupPhoneVC: UIViewController {
     }
     @objc func changeText(_ sender:UITextField){
         switch sender{
-        case phoneAuthView.verifyEdtView.tf1:
-            if phoneAuthView.verifyEdtView.tf1.text?.count == 0{
-                phoneAuthView.verifyEdtView.tf1.becomeFirstResponder()
-            }else{
-                phoneAuthView.verifyEdtView.tf2.becomeFirstResponder()
-            }
-        case phoneAuthView.verifyEdtView.tf2:
-            if phoneAuthView.verifyEdtView.tf2.text?.count == 0{
-                phoneAuthView.verifyEdtView.tf2.becomeFirstResponder()
-            }else{
-                phoneAuthView.verifyEdtView.tf3.becomeFirstResponder()
-            }
-        case phoneAuthView.verifyEdtView.tf3:
-            if phoneAuthView.verifyEdtView.tf3.text?.count == 0{
-                phoneAuthView.verifyEdtView.tf3.becomeFirstResponder()
-            }else{
-                phoneAuthView.verifyEdtView.tf4.becomeFirstResponder()
-            }
-        case phoneAuthView.verifyEdtView.tf4:
-            if phoneAuthView.verifyEdtView.tf4.text?.count == 0{
-                phoneAuthView.verifyEdtView.tf4.becomeFirstResponder()
-            }else{
-                phoneAuthView.verifyEdtView.tf5.becomeFirstResponder()
-            }
-        case phoneAuthView.verifyEdtView.tf5:
-            if phoneAuthView.verifyEdtView.tf5.text?.count == 0{
-                phoneAuthView.verifyEdtView.tf5.becomeFirstResponder()
-            }else{
-                phoneAuthView.verifyEdtView.tf6.becomeFirstResponder()
-            }
-        case phoneAuthView.verifyEdtView.tf6:
-            if phoneAuthView.verifyEdtView.tf6.text?.count == 0{
+        case phoneAuthView.verifyEdtView.tf1.textField:
+            if phoneAuthView.verifyEdtView.tf1.textField.text?.count == 0{
+                phoneAuthView.verifyEdtView.tf1.textField.becomeFirstResponder()
                 
             }else{
-                phoneAuthView.verifyEdtView.tf6.resignFirstResponder()
+                phoneAuthView.verifyEdtView.tf2.textField.becomeFirstResponder()
+                phoneAuthView.verifyEdtView.tf1.underline.layer.borderColor = UIColor.MainColor().cgColor
+            }
+        case phoneAuthView.verifyEdtView.tf2.textField:
+            if phoneAuthView.verifyEdtView.tf2.textField.text?.count == 0{
+                phoneAuthView.verifyEdtView.tf2.textField.becomeFirstResponder()
+                
+            }else{
+                phoneAuthView.verifyEdtView.tf3.textField.becomeFirstResponder()
+                phoneAuthView.verifyEdtView.tf2.underline.layer.borderColor = UIColor.MainColor().cgColor
+            }
+        case phoneAuthView.verifyEdtView.tf3.textField:
+            if phoneAuthView.verifyEdtView.tf3.textField.text?.count == 0{
+                phoneAuthView.verifyEdtView.tf3.textField.becomeFirstResponder()
+            }else{
+                phoneAuthView.verifyEdtView.tf4.textField.becomeFirstResponder()
+                phoneAuthView.verifyEdtView.tf3.underline.layer.borderColor = UIColor.MainColor().cgColor
+            }
+        case phoneAuthView.verifyEdtView.tf4.textField:
+            if phoneAuthView.verifyEdtView.tf4.textField.text?.count == 0{
+                phoneAuthView.verifyEdtView.tf4.textField.becomeFirstResponder()
+                
+            }else{
+                phoneAuthView.verifyEdtView.tf5.textField.becomeFirstResponder()
+                phoneAuthView.verifyEdtView.tf4.underline.layer.borderColor = UIColor.MainColor().cgColor
+            }
+        case phoneAuthView.verifyEdtView.tf5.textField:
+            if phoneAuthView.verifyEdtView.tf5.textField.text?.count == 0{
+                phoneAuthView.verifyEdtView.tf5.textField.becomeFirstResponder()
+                
+            }else{
+                phoneAuthView.verifyEdtView.tf6.textField.becomeFirstResponder()
+                phoneAuthView.verifyEdtView.tf5.underline.layer.borderColor = UIColor.MainColor().cgColor
+            }
+        case phoneAuthView.verifyEdtView.tf6.textField:
+            if phoneAuthView.verifyEdtView.tf6.textField.text?.count == 0{
+            }else{
+                phoneAuthView.verifyEdtView.tf6.textField.resignFirstResponder()
+                phoneAuthView.verifyEdtView.tf6.underline.layer.borderColor = UIColor.MainColor().cgColor
                 verifyFunc()
             }
         default:()

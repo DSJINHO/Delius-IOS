@@ -35,7 +35,7 @@ class MenuView:UIView{
         v.clipsToBounds = false
         return v
     }()
-    var gradationView:CrossGradationView!
+//    var gradationView:CrossGradationView!
     var btmView:UIView={
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -47,11 +47,10 @@ class MenuView:UIView{
     let profileView:UIView={
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor.white
-        v.layer.cornerRadius = 20
-        v.layer.shadowColor = UIColor.black.cgColor
-        v.layer.shadowOpacity = 0.4
-        v.layer.shadowRadius = 10
+        v.backgroundColor = UIColor.clear
+//        v.layer.cornerRadius = 20
+//        v.layer.shadowOpacity = 0.4
+//        v.layer.shadowRadius = 10
         return v
     }()
     var profileLabel:UILabel={
@@ -67,10 +66,7 @@ class MenuView:UIView{
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = .white
-        v.layer.shadowColor = UIColor.white.cgColor
-        v.layer.shadowOpacity = 0.5
-        v.layer.shadowOffset = CGSize(width: 1, height: 1)
-        v.layer.cornerRadius = 40
+        v.layer.cornerRadius = 74
         v.layer.masksToBounds = false
         return v
     }()
@@ -79,7 +75,7 @@ class MenuView:UIView{
         v.translatesAutoresizingMaskIntoConstraints = false
         v.clipsToBounds = true
         v.contentMode = .scaleAspectFill
-        v.layer.cornerRadius = 36
+        v.layer.cornerRadius = 66
         return v
     }()
     var profileNameLabel:UILabel={
@@ -108,7 +104,7 @@ class MenuView:UIView{
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .blackType1()
-        l.font = UIFont.DeliusBoldType1()
+        l.font = UIFont.DeliusBoldType4()
         l.textAlignment = .left
         l.text = "MenuView002".localize()
         return l
@@ -117,7 +113,7 @@ class MenuView:UIView{
     lazy var groupCollectionView:UICollectionView={
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 30
+        layout.minimumLineSpacing = 0
         layout.headerReferenceSize = CGSize(width:30,height:0)
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
@@ -139,8 +135,8 @@ class MenuView:UIView{
     var buyLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor.MainGrayColor()
-        l.font = UIFont.DeliusBoldType1()
+        l.textColor = .blackType1()
+        l.font = UIFont.DeliusBoldType4()
         l.textAlignment = .left
         l.text = "MenuView003".localize()
         return l
@@ -148,8 +144,8 @@ class MenuView:UIView{
     var envLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor.MainGrayColor()
-        l.font = UIFont.DeliusBoldType1()
+        l.textColor = .blackType1()
+        l.font = UIFont.DeliusBoldType4()
         l.textAlignment = .left
         l.text = "MenuView004".localize()
         return l
@@ -168,29 +164,43 @@ class MenuView:UIView{
         let b = UIButton()
         b.translatesAutoresizingMaskIntoConstraints = false
         b.setTitle("MenuView201".localize(), for: .normal)
-        b.setTitleColor(.white, for: .normal)
-        b.titleLabel!.font = UIFont.DeliusSystemType4()
+        b.setTitleColor(.blackType1(), for: .normal)
+        b.titleLabel!.font = UIFont.DeliusSystemType3()
         b.contentHorizontalAlignment = .right
         return b
     }()
     
-    let lineViewBuy:UIView={
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor.MainLightGrayColor()
-        return v
-    }()
-    
-    let lineViewEnv:UIView={
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor.MainLightGrayColor()
-        return v
-    }()
+//    let lineViewBuy:UIView={
+//        let v = UIView()
+//        v.translatesAutoresizingMaskIntoConstraints = false
+//        v.backgroundColor = UIColor.MainLightGrayColor()
+//        return v
+//    }()
+//
+//    let lineViewEnv:UIView={
+//        let v = UIView()
+//        v.translatesAutoresizingMaskIntoConstraints = false
+//        v.backgroundColor = UIColor.MainLightGrayColor()
+//        return v
+//    }()
     let lineView1:UIView={
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .white
+        v.backgroundColor = .MainLightGrayColor()
+        return v
+    }()
+    
+    let lineView2:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .MainLightGrayColor()
+        return v
+    }()
+    
+    let lineView3:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .MainLightGrayColor()
         return v
     }()
     
@@ -205,8 +215,8 @@ class MenuView:UIView{
         return v
     }()
     var plusUserBtn:MenuSubView2!
-    var deliBtn:MenuSubView!
-    var boosterBtn:MenuSubView!
+    var deliBtn:MenuSubView3!
+    var boosterBtn:MenuSubView4!
     var filterBtn:MenuSubView!
     var blockBtn:MenuSubView!
     
@@ -229,7 +239,7 @@ class MenuView:UIView{
         super.init(frame:frame)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = UIColor.white
-        gradationView = CrossGradationView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+//        gradationView = CrossGradationView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         
         settingBtn = IconButton1(imgName: "Setting", color: .white, frame: CGRect(x:0,y:0,width:30,height:30))
         userDeliBtn = IconButton1(imgName: "CheckDeli", color: .white, frame: CGRect(x:0,y:0,width:30,height:30))
@@ -251,11 +261,11 @@ class MenuView:UIView{
         
         let btnFrame = CGRect(x:0,y:0,width:width-60,height:60)
         
-        self.addSubview(gradationView)
-        gradationView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        gradationView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        gradationView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        gradationView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+//        self.addSubview(gradationView)
+//        gradationView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+//        gradationView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+//        gradationView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+//        gradationView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         
         self.addSubview(settingBtn)
@@ -264,17 +274,17 @@ class MenuView:UIView{
         settingBtn.heightAnchor.constraint(equalToConstant: 30).isActive = true
         settingBtn.rightAnchor.constraint(equalTo: rightAnchor, constant: -25).isActive = true
         
-        self.addSubview(lineView1)
-        lineView1.centerYAnchor.constraint(equalTo: settingBtn.centerYAnchor).isActive = true
-        lineView1.widthAnchor.constraint(equalToConstant: 1).isActive = true
-        lineView1.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        lineView1.rightAnchor.constraint(equalTo: settingBtn.leftAnchor,constant: -10).isActive = true
+//        self.addSubview(lineView1)
+//        lineView1.centerYAnchor.constraint(equalTo: settingBtn.centerYAnchor).isActive = true
+//        lineView1.widthAnchor.constraint(equalToConstant: 1).isActive = true
+//        lineView1.heightAnchor.constraint(equalToConstant: 15).isActive = true
+//        lineView1.rightAnchor.constraint(equalTo: settingBtn.leftAnchor,constant: -10).isActive = true
         
         self.addSubview(userBoosterBtn)
         userBoosterBtn.centerYAnchor.constraint(equalTo: settingBtn.centerYAnchor).isActive = true
         userBoosterBtn.widthAnchor.constraint(equalToConstant: 30).isActive = true
         userBoosterBtn.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        userBoosterBtn.rightAnchor.constraint(equalTo: lineView1.leftAnchor, constant: -10).isActive = true
+        userBoosterBtn.rightAnchor.constraint(equalTo: settingBtn.leftAnchor, constant: -8).isActive = true
         
         self.addSubview(userDeliBtn)
         userDeliBtn.centerYAnchor.constraint(equalTo: settingBtn.centerYAnchor).isActive = true
@@ -307,8 +317,8 @@ class MenuView:UIView{
         
         
 //        let profileViewHeight = width/5*2
-        let profileViewHeight:CGFloat = 100
-        let profileImgHeight:CGFloat = 70
+        let profileViewHeight:CGFloat = 148
+        let profileImgHeight:CGFloat = 148
         
         self.addSubview(profileView)
         profileView.topAnchor.constraint(equalTo: profileLabel.bottomAnchor, constant: 10).isActive = true
@@ -318,13 +328,13 @@ class MenuView:UIView{
         
         profileBackView.layer.cornerRadius = profileImgHeight/2
         profileView.addSubview(profileBackView)
-        profileBackView.centerYAnchor.constraint(equalTo: profileView.centerYAnchor).isActive = true
+        profileBackView.topAnchor.constraint(equalTo: profileView.topAnchor, constant: 10).isActive = true
         profileBackView.widthAnchor.constraint(equalToConstant: profileImgHeight).isActive = true
         profileBackView.heightAnchor.constraint(equalToConstant: profileImgHeight).isActive = true
         profileBackView.leftAnchor.constraint(equalTo: profileView.leftAnchor, constant: 45).isActive = true
         
         
-        profileImgView.layer.cornerRadius = (profileImgHeight-4)/2
+        profileImgView.layer.cornerRadius = (profileImgHeight-8)/2
         profileBackView.addSubview(profileImgView)
         profileImgView.topAnchor.constraint(equalTo: profileBackView.topAnchor, constant: 2).isActive = true
         profileImgView.leftAnchor.constraint(equalTo: profileBackView.leftAnchor, constant: 2).isActive = true
@@ -402,7 +412,7 @@ class MenuView:UIView{
         addGroupBtn.heightAnchor.constraint(equalToConstant: 25).isActive = true
         addGroupBtn.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -30).isActive = true
         
-        let groupViewHeight = ( width - 60 ) 
+        let groupViewHeight = ( width - 60 )
         self.addSubview(groupView)
         groupView.topAnchor.constraint(equalTo: groupLabel.bottomAnchor, constant: 20).isActive = true
         groupView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
@@ -442,7 +452,7 @@ class MenuView:UIView{
         buyView.topAnchor.constraint(equalTo: btmView.topAnchor, constant: 20).isActive = true
         buyView.leftAnchor.constraint(equalTo: btmView.leftAnchor).isActive = true
         buyView.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
-        buyView.heightAnchor.constraint(equalToConstant: 230).isActive = true
+        buyView.heightAnchor.constraint(equalToConstant: 260).isActive = true
         
         buyView.addSubview(buyLabel)
         buyLabel.topAnchor.constraint(equalTo: buyView.topAnchor).isActive = true
@@ -458,6 +468,7 @@ class MenuView:UIView{
         plusBtnBack.heightAnchor.constraint(equalToConstant: 50).isActive = true
     
         
+        
         plusUserBtn = MenuSubView2(frame: btnFrame)
         buyView.addSubview(plusUserBtn)
         plusUserBtn.topAnchor.constraint(equalTo: buyLabel.bottomAnchor,constant: 15).isActive = true
@@ -465,26 +476,38 @@ class MenuView:UIView{
         plusUserBtn.rightAnchor.constraint(equalTo: btmView.rightAnchor, constant: -30).isActive = true
         plusUserBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        buyView.addSubview(lineView1)
+        lineView1.topAnchor.constraint(equalTo: plusUserBtn.bottomAnchor).isActive = true
+        lineView1.leftAnchor.constraint(equalTo: btmView.leftAnchor, constant: 30).isActive = true
+        lineView1.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
+        lineView1.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
-        deliBtn = MenuSubView(txt: "MenuView302".localize(), frame: btnFrame)
+        
+        deliBtn = MenuSubView3(frame: btnFrame)
         buyView.addSubview(deliBtn)
-        deliBtn.topAnchor.constraint(equalTo: plusUserBtn.bottomAnchor, constant: 10).isActive = true
+        deliBtn.topAnchor.constraint(equalTo: plusUserBtn.bottomAnchor, constant: 15).isActive = true
         deliBtn.leftAnchor.constraint(equalTo: plusUserBtn.leftAnchor).isActive = true
         deliBtn.rightAnchor.constraint(equalTo: plusUserBtn.rightAnchor).isActive = true
         deliBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        boosterBtn = MenuSubView(txt: "MenuView303".localize(),  frame: btnFrame)
+        buyView.addSubview(lineView2)
+        lineView2.topAnchor.constraint(equalTo: deliBtn.bottomAnchor).isActive = true
+        lineView2.leftAnchor.constraint(equalTo: btmView.leftAnchor, constant: 30).isActive = true
+        lineView2.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
+        lineView2.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        boosterBtn = MenuSubView4(frame: btnFrame)
         buyView.addSubview(boosterBtn)
-        boosterBtn.topAnchor.constraint(equalTo: deliBtn.bottomAnchor).isActive = true
+        boosterBtn.topAnchor.constraint(equalTo: deliBtn.bottomAnchor, constant: 15).isActive = true
         boosterBtn.leftAnchor.constraint(equalTo: plusUserBtn.leftAnchor).isActive = true
         boosterBtn.rightAnchor.constraint(equalTo: plusUserBtn.rightAnchor).isActive = true
         boosterBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        buyView.addSubview(lineViewBuy)
-        lineViewBuy.centerYAnchor.constraint(equalTo: deliBtn.bottomAnchor).isActive = true
-        lineViewBuy.leftAnchor.constraint(equalTo: deliBtn.leftAnchor, constant: 15).isActive = true
-        lineViewBuy.rightAnchor.constraint(equalTo: deliBtn.rightAnchor, constant: -15).isActive = true
-        lineViewBuy.heightAnchor.constraint(equalToConstant: 1).isActive = true
+//        buyView.addSubview(lineViewBuy)
+//        lineViewBuy.centerYAnchor.constraint(equalTo: deliBtn.bottomAnchor).isActive = true
+//        lineViewBuy.leftAnchor.constraint(equalTo: deliBtn.leftAnchor, constant: 15).isActive = true
+//        lineViewBuy.rightAnchor.constraint(equalTo: deliBtn.rightAnchor, constant: -15).isActive = true
+//        lineViewBuy.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         btmView.addSubview(envView)
         envView.topAnchor.constraint(equalTo: buyView.bottomAnchor).isActive = true
@@ -500,23 +523,29 @@ class MenuView:UIView{
         
         filterBtn = MenuSubView(txt: "MenuView401".localize(), frame: btnFrame)
         envView.addSubview(filterBtn)
-        filterBtn.topAnchor.constraint(equalTo: envLabel.bottomAnchor).isActive = true
+        filterBtn.topAnchor.constraint(equalTo: envLabel.bottomAnchor,constant: 15).isActive = true
         filterBtn.leftAnchor.constraint(equalTo: plusUserBtn.leftAnchor).isActive = true
         filterBtn.rightAnchor.constraint(equalTo: envView.rightAnchor,constant:-35).isActive = true
         filterBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        envView.addSubview(lineView3)
+        lineView3.topAnchor.constraint(equalTo: filterBtn.bottomAnchor, constant: 7.5).isActive = true
+        lineView3.leftAnchor.constraint(equalTo: envView.leftAnchor, constant: 30).isActive = true
+        lineView3.rightAnchor.constraint(equalTo: envView.rightAnchor).isActive = true
+        lineView3.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
         blockBtn = MenuSubView(txt: "MenuView402".localize(), frame: btnFrame)
         envView.addSubview(blockBtn)
-        blockBtn.topAnchor.constraint(equalTo: filterBtn.bottomAnchor).isActive = true
+        blockBtn.topAnchor.constraint(equalTo: filterBtn.bottomAnchor,constant: 15).isActive = true
         blockBtn.leftAnchor.constraint(equalTo: filterBtn.leftAnchor).isActive = true
         blockBtn.rightAnchor.constraint(equalTo: envView.rightAnchor,constant:-35).isActive = true
         blockBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        envView.addSubview(lineViewEnv)
-        lineViewEnv.centerYAnchor.constraint(equalTo: filterBtn.bottomAnchor).isActive = true
-        lineViewEnv.leftAnchor.constraint(equalTo: filterBtn.leftAnchor, constant: 15).isActive = true
-        lineViewEnv.rightAnchor.constraint(equalTo: filterBtn.rightAnchor, constant: -15).isActive = true
-        lineViewEnv.heightAnchor.constraint(equalToConstant: 1).isActive = true
+//        envView.addSubview(lineViewEnv)
+//        lineViewEnv.centerYAnchor.constraint(equalTo: filterBtn.bottomAnchor).isActive = true
+//        lineViewEnv.leftAnchor.constraint(equalTo: filterBtn.leftAnchor, constant: 15).isActive = true
+//        lineViewEnv.rightAnchor.constraint(equalTo: filterBtn.rightAnchor, constant: -15).isActive = true
+//        lineViewEnv.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         self.bringSubviewToFront(addGroupBtn)
         self.bringSubviewToFront(groupView)
@@ -556,17 +585,17 @@ class MenuView:UIView{
         settingBtn.heightAnchor.constraint(equalToConstant: 30).isActive = true
         settingBtn.widthAnchor.constraint(equalToConstant: 30).isActive = true
         
-        topView.addSubview(lineView1)
-        lineView1.centerYAnchor.constraint(equalTo: menuBtn.centerYAnchor).isActive = true
-        lineView1.rightAnchor.constraint(equalTo: settingBtn.leftAnchor, constant: -5).isActive = true
-        lineView1.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        lineView1.widthAnchor.constraint(equalToConstant: 1).isActive = true
+//        topView.addSubview(lineView1)
+//        lineView1.centerYAnchor.constraint(equalTo: menuBtn.centerYAnchor).isActive = true
+//        lineView1.rightAnchor.constraint(equalTo: settingBtn.leftAnchor, constant: -5).isActive = true
+//        lineView1.heightAnchor.constraint(equalToConstant: 15).isActive = true
+//        lineView1.widthAnchor.constraint(equalToConstant: 1).isActive = true
         
         topView.addSubview(userBoosterBtn)
         userBoosterBtn.centerYAnchor.constraint(equalTo: menuBtn.centerYAnchor).isActive = true
         userBoosterBtn.widthAnchor.constraint(equalToConstant: 30).isActive = true
         userBoosterBtn.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        userBoosterBtn.rightAnchor.constraint(equalTo: lineView1.leftAnchor, constant: -5).isActive = true
+        userBoosterBtn.rightAnchor.constraint(equalTo: settingBtn.leftAnchor, constant: -8).isActive = true
         
         topView.addSubview(userDeliBtn)
         userDeliBtn.centerYAnchor.constraint(equalTo: menuBtn.centerYAnchor).isActive = true
@@ -582,7 +611,7 @@ class MenuView:UIView{
         
         
         scrollView.addSubview(btmView)
-        btmView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: width - topPadding - 120).isActive = true
+        btmView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: width - topPadding - 210).isActive = true
         btmView.leftAnchor.constraint(equalTo: scrollView.leftAnchor).isActive = true
         btmView.widthAnchor.constraint(equalToConstant: width).isActive = true
         btmView.heightAnchor.constraint(equalToConstant: 700).isActive = true
@@ -595,16 +624,16 @@ class MenuView:UIView{
         
         
         profileView.addSubview(profileBackView)
-        profileBackView.topAnchor.constraint(equalTo: profileView.topAnchor, constant: 20).isActive = true
+        profileBackView.topAnchor.constraint(equalTo: profileView.topAnchor, constant: 10).isActive = true
         profileBackView.centerXAnchor.constraint(equalTo: profileView.centerXAnchor).isActive = true
-        profileBackView.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        profileBackView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        profileBackView.widthAnchor.constraint(equalToConstant: 148).isActive = true
+        profileBackView.heightAnchor.constraint(equalToConstant: 148).isActive = true
         
         profileBackView.addSubview(profileImgView)
-        profileImgView.topAnchor.constraint(equalTo: profileBackView.topAnchor, constant: 4).isActive = true
-        profileImgView.leftAnchor.constraint(equalTo: profileBackView.leftAnchor,constant: 4).isActive = true
-        profileImgView.rightAnchor.constraint(equalTo: profileBackView.rightAnchor, constant: -4).isActive = true
-        profileImgView.bottomAnchor.constraint(equalTo: profileBackView.bottomAnchor, constant: -4).isActive = true
+        profileImgView.topAnchor.constraint(equalTo: profileBackView.topAnchor, constant: 8).isActive = true
+        profileImgView.leftAnchor.constraint(equalTo: profileBackView.leftAnchor,constant: 8).isActive = true
+        profileImgView.rightAnchor.constraint(equalTo: profileBackView.rightAnchor, constant: -8).isActive = true
+        profileImgView.bottomAnchor.constraint(equalTo: profileBackView.bottomAnchor, constant: -8).isActive = true
         
         profileView.addSubview(profileNameLabel)
         profileNameLabel.topAnchor.constraint(equalTo: profileImgView.bottomAnchor, constant: 20).isActive = true
@@ -633,14 +662,14 @@ class MenuView:UIView{
         btmView.addSubview(groupCollectionView)
         groupCollectionView.leftAnchor.constraint(equalTo: btmView.leftAnchor).isActive = true
         groupCollectionView.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
-        groupCollectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        groupCollectionView.topAnchor.constraint(equalTo: groupLabel.bottomAnchor, constant: 10).isActive = true
+        groupCollectionView.heightAnchor.constraint(equalToConstant: 170).isActive = true
+        groupCollectionView.topAnchor.constraint(equalTo: groupLabel.bottomAnchor, constant: 5).isActive = true
         
         btmView.addSubview(buyView)
         buyView.topAnchor.constraint(equalTo: groupCollectionView.bottomAnchor, constant: 20).isActive = true
         buyView.leftAnchor.constraint(equalTo: btmView.leftAnchor).isActive = true
         buyView.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
-        buyView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+        buyView.heightAnchor.constraint(equalToConstant: 260).isActive = true
         
         buyView.addSubview(buyLabel)
         buyLabel.topAnchor.constraint(equalTo: buyView.topAnchor, constant: 20).isActive = true
@@ -654,21 +683,31 @@ class MenuView:UIView{
         plusUserBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
         plusUserBtn.leftAnchor.constraint(equalTo: buyView.leftAnchor, constant: 30).isActive = true
         plusUserBtn.rightAnchor.constraint(equalTo: buyView.rightAnchor, constant: -30).isActive = true
+        buyView.addSubview(lineView1)
+        lineView1.topAnchor.constraint(equalTo: plusUserBtn.bottomAnchor).isActive = true
+        lineView1.leftAnchor.constraint(equalTo: btmView.leftAnchor, constant: 30).isActive = true
+        lineView1.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
+        lineView1.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
-        
-        deliBtn = MenuSubView(txt: "MenuView302".localize(), frame: CGRect(x:0,y:0,width:width-60,height:60))
+        deliBtn = MenuSubView3(frame: CGRect(x:0,y: 0,width: width - 60,height: 50))
         buyView.addSubview(deliBtn)
-        deliBtn.topAnchor.constraint(equalTo: plusUserBtn.bottomAnchor).isActive = true
+        deliBtn.topAnchor.constraint(equalTo: plusUserBtn.bottomAnchor, constant: 14).isActive = true
+        deliBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
         deliBtn.leftAnchor.constraint(equalTo: buyView.leftAnchor, constant: 30).isActive = true
         deliBtn.rightAnchor.constraint(equalTo: buyView.rightAnchor, constant: -30).isActive = true
-        deliBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        boosterBtn = MenuSubView(txt: "MenuView303".localize(),  frame: CGRect(x:0,y:0,width:width-60,height:60))
+        buyView.addSubview(lineView2)
+        lineView2.topAnchor.constraint(equalTo: deliBtn.bottomAnchor).isActive = true
+        lineView2.leftAnchor.constraint(equalTo: btmView.leftAnchor, constant: 30).isActive = true
+        lineView2.rightAnchor.constraint(equalTo: btmView.rightAnchor).isActive = true
+        lineView2.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        boosterBtn = MenuSubView4(frame: CGRect(x:0,y: 0,width: width - 60,height: 50))
         buyView.addSubview(boosterBtn)
-        boosterBtn.topAnchor.constraint(equalTo: deliBtn.bottomAnchor).isActive = true
+        boosterBtn.topAnchor.constraint(equalTo: deliBtn.bottomAnchor, constant: 14).isActive = true
+        boosterBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
         boosterBtn.leftAnchor.constraint(equalTo: buyView.leftAnchor, constant: 30).isActive = true
         boosterBtn.rightAnchor.constraint(equalTo: buyView.rightAnchor, constant: -30).isActive = true
-        boosterBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         btmView.addSubview(envView)
         envView.topAnchor.constraint(equalTo: buyView.bottomAnchor, constant: 10).isActive = true
@@ -684,14 +723,20 @@ class MenuView:UIView{
         
         filterBtn = MenuSubView(txt: "MenuView401".localize(), frame: CGRect(x:0,y:0,width:width-60,height:60))
         envView.addSubview(filterBtn)
-        filterBtn.topAnchor.constraint(equalTo: envLabel.bottomAnchor).isActive = true
+        filterBtn.topAnchor.constraint(equalTo: envLabel.bottomAnchor, constant: 15).isActive = true
         filterBtn.leftAnchor.constraint(equalTo: plusUserBtn.leftAnchor).isActive = true
         filterBtn.rightAnchor.constraint(equalTo: envView.rightAnchor,constant:-35).isActive = true
         filterBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        envView.addSubview(lineView3)
+        lineView3.topAnchor.constraint(equalTo: filterBtn.bottomAnchor, constant: 7.5).isActive = true
+        lineView3.leftAnchor.constraint(equalTo: envView.leftAnchor, constant: 30).isActive = true
+        lineView3.rightAnchor.constraint(equalTo: envView.rightAnchor).isActive = true
+        lineView3.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
         blockBtn = MenuSubView(txt: "MenuView402".localize(), frame: CGRect(x:0,y:0,width:width-60,height:60))
         envView.addSubview(blockBtn)
-        blockBtn.topAnchor.constraint(equalTo: filterBtn.bottomAnchor).isActive = true
+        blockBtn.topAnchor.constraint(equalTo: filterBtn.bottomAnchor, constant: 15).isActive = true
         blockBtn.leftAnchor.constraint(equalTo: filterBtn.leftAnchor).isActive = true
         blockBtn.rightAnchor.constraint(equalTo: envView.rightAnchor,constant:-35).isActive = true
         blockBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true

@@ -12,7 +12,7 @@ final class LocalPhoneNumPickerView:UIView{
     let arrs = ["kr 082","kr 082","kr 082","kr 082","kr 082"]
     let titleLabel:UILabel={
         let l = UILabel()
-        l.DeliusLabel(txt: "PhoneAuthView500".localize(), txtAlignment: .left, ft: UIFont.DeliusBoldType1(), txtColor: UIColor.MainBlackColor1())
+        l.DeliusLabel(txt: "PhoneAuthView500".toLocal(), txtAlignment: .left, ft: UIFont.DeliusBoldType1(), txtColor: UIColor.MainBlackColor1())
         return l
     }()
     

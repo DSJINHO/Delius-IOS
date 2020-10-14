@@ -21,6 +21,5 @@ extension PermissionVC{
         permissionView.view1.addTarget(self, action: #selector(tapFunc(_:)), for: .touchUpInside)
         permissionView.view2.addTarget(self, action: #selector(tapFunc(_:)), for: .touchUpInside)
         permissionView.view3.addTarget(self, action: #selector(tapFunc(_:)), for: .touchUpInside)
-        //permissionView.view4.addTarget(self, action: #selector(tapFunc(_:)), for: .touchUpInside)
     }
 }

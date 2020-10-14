@@ -8,7 +8,7 @@
 import UIKit
 final class VerificationTextFieldView:UIView{
     
-    var tf1,tf2,tf3,tf4,tf5,tf6:VerificationTextField!
+    var tf1,tf2,tf3,tf4,tf5,tf6:VerifyTextField!
     
     
     required init?(coder: NSCoder) {
@@ -18,16 +18,16 @@ final class VerificationTextFieldView:UIView{
         super.init(frame:frame)
         self.translatesAutoresizingMaskIntoConstraints = false
         let term:CGFloat = 10
-        let width = ( frame.width - 60 - term*5 )/6
+        let width = ( frame.width - 62 - term*5 )/6
         let height = frame.height
         let fieldFrame = CGRect(x:0,y:0,width:width,height: height)
         
-        tf1 = VerificationTextField(frame: fieldFrame)
-        tf2 = VerificationTextField(frame: fieldFrame)
-        tf3 = VerificationTextField(frame: fieldFrame)
-        tf4 = VerificationTextField(frame: fieldFrame)
-        tf5 = VerificationTextField(frame: fieldFrame)
-        tf6 = VerificationTextField(frame:fieldFrame)
+        tf1 = VerifyTextField(frame: fieldFrame)
+        tf2 = VerifyTextField(frame: fieldFrame)
+        tf3 = VerifyTextField(frame: fieldFrame)
+        tf4 = VerifyTextField(frame: fieldFrame)
+        tf5 = VerifyTextField(frame: fieldFrame)
+        tf6 = VerifyTextField(frame:fieldFrame)
         
         setup(width:width,term:term,height:height - 20)
     }
@@ -35,7 +35,7 @@ final class VerificationTextFieldView:UIView{
         
         self.addSubview(tf1)
         tf1.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        tf1.leftAnchor.constraint(equalTo: leftAnchor,constant: 30).isActive = true
+        tf1.leftAnchor.constraint(equalTo: leftAnchor,constant: 40).isActive = true
         tf1.widthAnchor.constraint(equalToConstant: width).isActive = true
         tf1.heightAnchor.constraint(equalToConstant: height).isActive = true
         self.addSubview(tf2)

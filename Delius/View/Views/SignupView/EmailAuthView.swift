@@ -7,25 +7,65 @@
 //
 import UIKit
 final class EmailAuthView:UIView{
-    let titleLabel:UILabel={
+    var point:UILabel = {
         let l = UILabel()
-        l.DeliusLabel(txt: "EmailAuthView001".localize(), txtAlignment: .left, ft: UIFont.DeliusBoldType4(), txtColor: .MainGrayColor())
+        l.pointLabel()
         return l
     }()
-    let titleLabel2:UILabel={
+    let emailView:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    let emailTitleLabel:UILabel={
         let l = UILabel()
-        l.DeliusLabel(txt: "EmailAuthView002".localize(), txtAlignment: .left, ft: UIFont.DeliusBoldType4(), txtColor: .MainGrayColor())
+        l.MainLabel(txt: "EmailAuthView001".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType5())
+        return l
+    }()
+    let emailTitleLabel2:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "EmailAuthView002".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType5())
+        return l
+    }()
+    let emailSubLabel:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "EmailAuthView003".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType4())
+        return l
+    }()
+    let emailSubLabel2:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "EmailAuthView004".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType4())
         return l
     }()
     
-    //let subLabel:UILabel={
-    //    let l = UILabel()
-    //    l.DeliusLabel(txt: "EmailAuthView002".localize(), txtAlignment: .left, ft: UIFont.DeliusSystemType2(), txtColor: .MainGrayColor())
-    //    return l
-    //}()
-    var emailView:EmailAuthSubView!
-    var passwordView1:EmailAuthSubView!
-    var passwordView2:EmailAuthSubView!
+    let passwordView:UIView={
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    let passwordTitleLabel:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "PasswordAuthView001".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType5())
+        return l
+    }()
+    let passwordTitleLabel2:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "PasswordAuthView002".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType5())
+        return l
+    }()
+    let passwordSubLabel:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "PasswordAuthView003".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType4())
+        return l
+    }()
+    let passwordSubLabel2:UILabel={
+        let l = UILabel()
+        l.MainLabel(txt: "PasswordAuthView004".toLocal(), txtAlignment: .left, fnt: UIFont.DeliusBoldType4())
+        return l
+    }()
+    var nsLeft1,nsRight1:NSLayoutConstraint!
+    var emailTextField,passwordTextField:LoginTF!
+
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -34,54 +74,104 @@ final class EmailAuthView:UIView{
         super.init(frame:frame)
         self.translatesAutoresizingMaskIntoConstraints = false
         let subRect = CGRect(x:0,y:0,width:frame.width,height:50)
-        emailView = EmailAuthSubView(ph_txt: "EmailAuthView300".localize(), frame: subRect)
-        passwordView1 = EmailAuthSubView(ph_txt: "EmailAuthView301".localize(), frame: subRect)
-        passwordView2 = EmailAuthSubView(ph_txt: "EmailAuthView302".localize(), frame: subRect)
-        
-        passwordView1.edt.isSecureTextEntry = true
-        passwordView2.edt.isSecureTextEntry = true
-        
+        emailTextField = LoginTF(placeHolder: "", frame: subRect)
+        passwordTextField = LoginTF(placeHolder: "", frame: subRect)
         setup(frame:frame)
     }
     private func setup(frame:CGRect){
-        let title_str = "EmailAuthView001".localize()
-        let title_height = title_str.StringHeight(withConstrainedWidth: frame.width - 60, font: UIFont.DeliusBoldType4())
-        self.addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: topAnchor,constant: 20).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 30).isActive = true
-        titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -30).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: title_height).isActive = true
-        
-        let sub_str = "EmailAuthView002".localize()
-        let sub_height = sub_str.StringHeight(withConstrainedWidth: frame.width - 60, font: UIFont.DeliusBoldType4())
-        //self.addSubview(subLabel)
-        //subLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
-        //subLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
-        //subLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
-        //subLabel.heightAnchor.constraint(equalToConstant: sub_height).isActive = true
-        
         self.addSubview(emailView)
-        emailView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
-        emailView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        emailView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        emailView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        emailView.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        nsLeft1 = emailView.leftAnchor.constraint(equalTo: leftAnchor)
+        nsLeft1.isActive = true
+        nsRight1 = emailView.rightAnchor.constraint(equalTo: rightAnchor)
+        nsRight1.isActive = true
+        emailView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+//        self.addSubview(passwordView)
+//        passwordView.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+//        nsLeft1 = passwordView.leftAnchor.constraint(equalTo: leftAnchor)
+//        nsLeft1.isActive = true
+//        nsRight1 = passwordView.rightAnchor.constraint(equalTo: rightAnchor)
+//        nsRight1.isActive = true
+//        passwordView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        let title_str = "EmailAuthView001".toLocal()
+        let title_height = title_str.StringHeight(withConstrainedWidth: frame.width - 60, font: UIFont.DeliusBoldType5())
+        emailView.addSubview(emailTitleLabel)
+        emailTitleLabel.topAnchor.constraint(equalTo: emailView.topAnchor).isActive = true
+        emailTitleLabel.heightAnchor.constraint(equalToConstant: title_height).isActive = true
+        emailTitleLabel.leftAnchor.constraint(equalTo: emailView.leftAnchor, constant: 40).isActive = true
+        emailTitleLabel.rightAnchor.constraint(equalTo: emailView.rightAnchor, constant: -30).isActive = true
+        emailView.addSubview(point)
+        point.topAnchor.constraint(equalTo: emailTitleLabel.topAnchor, constant: 0 ).isActive = true
+        point.rightAnchor.constraint(equalTo: emailTitleLabel.leftAnchor, constant: 15).isActive = true
+        point.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        point.heightAnchor.constraint(equalToConstant: 5).isActive = true
+
         
-        self.addSubview(titleLabel2)
-        titleLabel2.topAnchor.constraint(equalTo: emailView.bottomAnchor,constant: 20).isActive = true
-        titleLabel2.leftAnchor.constraint(equalTo: leftAnchor, constant: 30).isActive = true
-        titleLabel2.rightAnchor.constraint(equalTo: rightAnchor, constant: -30).isActive = true
-        titleLabel2.heightAnchor.constraint(equalToConstant: sub_height).isActive = true
+        emailView.addSubview(emailTitleLabel2)
+        emailTitleLabel2.topAnchor.constraint(equalTo: emailTitleLabel.bottomAnchor).isActive = true
+        emailTitleLabel2.heightAnchor.constraint(equalToConstant: title_height).isActive = true
+        emailTitleLabel2.leftAnchor.constraint(equalTo: emailView.leftAnchor, constant: 40).isActive = true
+        emailTitleLabel2.rightAnchor.constraint(equalTo: emailView.rightAnchor, constant: -40).isActive = true
+        let sub_str = "EmailAuthView002".toLocal()
+        let sub_height = sub_str.StringHeight(withConstrainedWidth: frame.width - 60, font: UIFont.DeliusBoldType4())
+        emailView.addSubview(emailSubLabel)
+        emailSubLabel.topAnchor.constraint(equalTo: emailTitleLabel2.bottomAnchor).isActive = true
+        emailSubLabel.heightAnchor.constraint(equalToConstant: sub_height).isActive = true
+        emailSubLabel.leftAnchor.constraint(equalTo: emailView.leftAnchor, constant: 40).isActive = true
+        emailSubLabel.rightAnchor.constraint(equalTo: emailView.rightAnchor, constant: -40).isActive = true
         
-        self.addSubview(passwordView1)
-        passwordView1.topAnchor.constraint(equalTo: titleLabel2.bottomAnchor,constant: 10).isActive = true
-        passwordView1.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        passwordView1.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        passwordView1.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        self.addSubview(passwordView2)
-        passwordView2.topAnchor.constraint(equalTo: passwordView1.bottomAnchor).isActive = true
-        passwordView2.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        passwordView2.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        passwordView2.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        emailView.addSubview(emailSubLabel2)
+        emailSubLabel2.topAnchor.constraint(equalTo: emailSubLabel.bottomAnchor).isActive = true
+        emailSubLabel2.heightAnchor.constraint(equalToConstant: sub_height).isActive = true
+        emailSubLabel2.leftAnchor.constraint(equalTo: emailView.leftAnchor, constant: 40).isActive = true
+        emailSubLabel2.rightAnchor.constraint(equalTo: emailView.rightAnchor, constant: -40).isActive = true
+        
+        emailView.addSubview(emailTextField)
+        emailTextField.topAnchor.constraint(equalTo: emailSubLabel2.bottomAnchor, constant: 50).isActive = true
+        emailTextField.leftAnchor.constraint(equalTo: emailView.leftAnchor, constant: 40).isActive = true
+        emailTextField.rightAnchor.constraint(equalTo: emailView.rightAnchor, constant: -40).isActive = true
+        emailTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+//
+//        passwordView.addSubview(passwordTitleLabel)
+//        passwordTitleLabel.topAnchor.constraint(equalTo: passwordView.topAnchor).isActive = true
+//        passwordTitleLabel.heightAnchor.constraint(equalToConstant: title_height).isActive = true
+//        passwordTitleLabel.leftAnchor.constraint(equalTo: passwordView.leftAnchor, constant: 40).isActive = true
+//        passwordTitleLabel.rightAnchor.constraint(equalTo: passwordView.rightAnchor, constant: -40).isActive = true
+//        passwordView.addSubview(point)
+//        point.topAnchor.constraint(equalTo: passwordTitleLabel.topAnchor, constant: 0 ).isActive = true
+//        point.rightAnchor.constraint(equalTo: passwordTitleLabel.leftAnchor, constant: 15).isActive = true
+//        point.widthAnchor.constraint(equalToConstant: 30).isActive = true
+//        point.heightAnchor.constraint(equalToConstant: 5).isActive = true
+//
+//
+//        passwordView.addSubview(passwordTitleLabel2)
+//        passwordTitleLabel2.topAnchor.constraint(equalTo: passwordTitleLabel.bottomAnchor).isActive = true
+//        passwordTitleLabel2.heightAnchor.constraint(equalToConstant: title_height).isActive = true
+//        passwordTitleLabel2.leftAnchor.constraint(equalTo: passwordView.leftAnchor, constant: 40).isActive = true
+//        passwordTitleLabel2.rightAnchor.constraint(equalTo: passwordView.rightAnchor, constant: -40).isActive = true
+//
+//        passwordView.addSubview(passwordSubLabel)
+//        passwordSubLabel.topAnchor.constraint(equalTo: passwordTitleLabel2.bottomAnchor).isActive = true
+//        passwordSubLabel.heightAnchor.constraint(equalToConstant: sub_height).isActive = true
+//        passwordSubLabel.leftAnchor.constraint(equalTo: passwordView.leftAnchor, constant: 40).isActive = true
+//        passwordSubLabel.rightAnchor.constraint(equalTo: passwordView.rightAnchor, constant: -40).isActive = true
+//
+//        passwordView.addSubview(passwordSubLabel2)
+//        passwordSubLabel2.topAnchor.constraint(equalTo: passwordSubLabel.bottomAnchor).isActive = true
+//        passwordSubLabel2.heightAnchor.constraint(equalToConstant: sub_height).isActive = true
+//        passwordSubLabel2.leftAnchor.constraint(equalTo: passwordView.leftAnchor, constant: 40).isActive = true
+//        passwordSubLabel2.rightAnchor.constraint(equalTo: passwordView.rightAnchor, constant: -40).isActive = true
+//
+        emailView.addSubview(passwordTextField)
+        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20).isActive = true
+        passwordTextField.leftAnchor.constraint(equalTo: emailView.leftAnchor, constant: 40).isActive = true
+        passwordTextField.rightAnchor.constraint(equalTo: emailView.rightAnchor, constant: -40).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        
+       
+
         
     }
 }

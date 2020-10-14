@@ -16,11 +16,8 @@ final class VerificationTextField:UITextField{
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.layer.cornerRadius = 5
         let size = frame.width - 8
         self.backgroundColor = UIColor.clear
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.MainLightGrayColor().cgColor
         self.font = UIFont.systemFont(ofSize: size)
         self.textColor = UIColor.MainGrayColor()
         self.textAlignment = .center

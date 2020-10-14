@@ -34,10 +34,39 @@
 
 
 //Login View String
+=======
+"next" = "다음";
+"error" = "오류";
+
+"WelcomeView001" = "전화번호로 시작하기";
+"WelcomeView002" = "이메일 계정으로 시작하기";
+"WelcomeView003" = "본 서비스는 만 18세 이상의 사용자만 이용 가능합니다";
+
+"PermissionView001" = "서비스 이용을 위해";
+"PermissionView002" = "다음의 권한을 허용해주세요.";
+"PermissionView003" = "'시작하기'를 누를 시 권한에 동의를 한 것으로 간주되며, 선택사항을 비허용시 일부 서비스가 제한될 수 있습니다.";
+"PermissionView100" = "위치";
+"PermissionView101" = "주변 사용자 검색, 사용자 프로필 제공시 활용";
+"PermissionView102" = "(필수사항)";
+"PermissionView200" = "주소록";
+"PermissionView201" = "그룹 초대, 원치않는 사용자 차단시 활용";
+"PermissionView202" = "(선택사항)";
+"PermissionView300" = "사진";
+"PermissionView301" = "프로필 이미지 설정에 활용";
+"PermissionView302" = "(선택사항)";
+
+"PermissionView500" = "필수권한에 동의해주세요.";
+"PermissionView501" = "위치권한은 필수입니다!";
+
+"PermissionView900" = "시작하기";
+
+
+>>>>>>> master
 
 "LoginView001" = "로그인";
 "LoginView101" = "회원가입";
 "LoginView102" = "ID/PW 찾기";
+<<<<<<< HEAD
 "LoginView900" = "이메일과 비밀번호를 입력해주세요.";
 "LoginView901" = "이메일 형식이 올바르지 않습니다.";
 "LoginView902" = "사용이 제한된 사용자입니다.";
@@ -214,22 +243,22 @@
 
 "BuyDeliBtn101" = "딜리 구매";
 "BuyDeliBtn102" = "딜리로 더 많은 상대를 만나보세요.";
-"BuyPlusUserView001" = "5";
-"BuyPlusUserView002" = "₩4,900";
-"BuyPlusUserView003" = "₩980/1개";
-"BuyPlusUserView004" = "10";
-"BuyPlusUserView005" = "₩8,900";
-"BuyPlusUserView006" = "₩890/1개";
-"BuyPlusUserView007" = "₩20";
-"BuyPlusUserView008" = "₩14,900";
-"BuyPlusUserView009" = "₩745/1개";
-"BuyPlusUserView010" = "구매한 딜리는 데일리 딜리와 구분되어 보관됩니다.";
-"BuyPlusUserView101" = "더 많은 프로필 포기";
-"BuyPlusUserView102" = "딜리를 사용해 새로운 상대의 프로필을 만나보세요.";
-"BuyPlusUserView201" = "딜리로 매칭 확률 높이기";
-"BuyPlusUserView202" = "딜리를 받은 상대는 아이템을 사용하지 않아도 돼요.";
-"BuyPlusUserView301" = "딜리로 그룹매칭 하기";
-"BuyPlusUserView302" = "매칭시 딜리를 사용하면 그룹원은 아이템을 소모하지 않아도 돼요.";
+"BuyDeliView001" = "5";
+"BuyDeliView002" = "₩4,900";
+"BuyDeliView003" = "₩980/1개";
+"BuyDeliView004" = "10";
+"BuyDeliView005" = "₩8,900";
+"BuyDeliView006" = "₩890/1개";
+"BuyDeliView007" = "₩20";
+"BuyDeliView008" = "₩14,900";
+"BuyDeliView009" = "₩745/1개";
+"BuyDeliView010" = "구매한 딜리는 데일리 딜리와 구분되어 보관됩니다.";
+"BuyDeliView101" = "더 많은 프로필 포기";
+"BuyDeliView102" = "딜리를 사용해 새로운 상대의 프로필을 만나보세요.";
+"BuyDeliView201" = "딜리로 매칭 확률 높이기";
+"BuyDeliView202" = "딜리를 받은 상대는 아이템을 사용하지 않아도 돼요.";
+"BuyDeliView301" = "딜리로 그룹매칭 하기";
+"BuyDeliView302" = "매칭시 딜리를 사용하면 그룹원은 아이템을 소모하지 않아도 돼요.";
 
 "FilterView001" = "검색 설정";
 "FilterView002" = "설정 저장";
@@ -444,6 +473,7 @@
 "Check" = "확인";
 "Out" ="나가기";
 "Next" = "다음";
+"tab" = "탭하여 보기"
 
 
 //Match View String
@@ -454,3 +484,46 @@
 "MatchView001" = "매칭되었습니다.";
 "MatchView002" = "메시지 보내기";
 "MatchView003" = "매칭 계속하기";
+=======
+"LoginView900" = "이메일과 비밀번호를 입력해주세요";
+"LoginView901" = "이메일이 올바르지 않습니다";
+"LoginView902" = "사용불가한 유저입니다";
+"LoginView903" = "잘못된 비밀번호입니다";
+"LoginView904" = "이메일 로그인 중 오류가 발생하였습니다";
+
+"TermView001" = "전체 동의";
+"TermView002" = "가입전 약관동의가";
+"TermView003" = "필요합니다.";
+"TermView101" = "서비스 이용약관";
+"TermView102" = "개인정보 취급방침";
+"TermView103" = "위치서비스 이용약관";
+
+"TermView901" = "알림";
+"TermView902" = "모든 이용약관에 동의해주세요.";
+
+"PhoneAuthView001" = "전화번호 인증이";
+"PhoneAuthView002" = "필요합니다";
+"PhoneAuthView003" = "인증받기";
+"PhoneAuthView004" = "인증번호는 문자로 발송됩니다.";
+"PhoneAuthView005" = "번호를 입력해주세요!";
+
+"PhoneAuthView101" = "인증번호가 발송되었습니다";
+"PhoneAuthView102" = "인증번호 6자리를";
+"PhoneAuthView103" = "입력해주세요.";
+"PhoneAuthView104" = "문자가 오지 않았다면";
+"PhoneAuthView105" = "핸드폰 번호를 확인해주세요.";
+"PhoneAuthView106" = "인증번호 확인";
+"PhoneAuthView500" = "국가번호 선택";
+
+
+"EmailAuthView001" = "아이디로 사용할";
+"EmailAuthView002" = "이메일을 입력해주세요";
+"EmailAuthView003" = "입력한 이메일은";
+"EmailAuthView004" = "변경이 불가능합니다.";
+"EmailAuthView301" = "지원하지 않는 이메일 형식입니다";
+
+"PassWordView001" = "사용하실 비밀번호를";
+"PassWordView002" = "입력해주세요."
+"PassWordView003" = "영어, 숫자, 특수문자를 조합하여";
+"PassWordView004" = "8자리이상 입력해주세요."
+

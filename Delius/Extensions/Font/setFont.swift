@@ -53,6 +53,12 @@ extension UIFont{
     class func DeliusSystemType4()->UIFont{
         return UIFont.systemFont(ofSize: 15)
     }
+    class func DeliusSystemType5()->UIFont{
+        return UIFont.systemFont(ofSize: 16)
+    }
+    class func DeliusSystemType6()->UIFont{
+        return UIFont.systemFont(ofSize: 8)
+    }
     
     
     

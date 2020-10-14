@@ -10,13 +10,6 @@
 import UIKit
 class MenuSubView2:UIButton{
     
-    var gradientLayer: CAGradientLayer = {
-        let layer = CAGradientLayer()
-        layer.colors = [UIColor.allGradientColor()[0].cgColor,UIColor.allGradientColor()[1].cgColor]
-        layer.startPoint = CGPoint.zero
-        layer.endPoint = CGPoint(x: 1, y: 0)
-        return layer
-    }()
     var imgView:UIImageView={
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -28,8 +21,8 @@ class MenuSubView2:UIButton{
     var txtLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor.white
-        l.font = UIFont.DeliusBoldType1()
+        l.textColor = UIColor.black
+        l.font = UIFont.DeliusBoldType4()
         l.textAlignment = .center
         l.text = "MenuView301".localize()
         l.baselineAdjustment = .alignBaselines
@@ -38,10 +31,10 @@ class MenuSubView2:UIButton{
     let subLabel:UILabel={
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = .white
+        l.textColor = .MainGrayColor()
         l.font = UIFont.DeliusSystemType3()
         l.textAlignment = .center
-        l.text = "MenuView3011".localize()
+        l.text = "BuyPlusUserBtn102".toLocal()
         return l
     }()
     required init?(coder:NSCoder){
@@ -52,15 +45,13 @@ class MenuSubView2:UIButton{
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = frame.height/6
         self.clipsToBounds = true
-        gradientLayer.frame = CGRect(x:0,y:0,width: frame.width,height: frame.height)
-        layer.sublayers = [gradientLayer]
         imgView.image = UIImage(named: "BuyPlus")
         setup()
     }
     private func setup(){
         let textWidth = "MenuView0301".localize().StringWidth(withConstrainedHeight: 30, font: UIFont.DeliusBoldType2())
         self.addSubview(txtLabel)
-        txtLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 10).isActive = true
+        txtLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         txtLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         txtLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         txtLabel.widthAnchor.constraint(equalToConstant: textWidth+15).isActive = true
@@ -72,10 +63,10 @@ class MenuSubView2:UIButton{
         subLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
         
         self.addSubview(imgView)
-        imgView.centerYAnchor.constraint(equalTo: txtLabel.centerYAnchor).isActive = true
-        imgView.rightAnchor.constraint(equalTo: txtLabel.leftAnchor, constant: -5).isActive = true
-        imgView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        imgView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        imgView.topAnchor.constraint(equalTo: txtLabel.topAnchor).isActive = true
+        imgView.leftAnchor.constraint(equalTo: leftAnchor, constant: 30).isActive = true
+        imgView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        imgView.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
     }
 }

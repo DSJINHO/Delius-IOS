@@ -51,8 +51,7 @@ final class SignupTopView:UIView{
     init(type:String,frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
-        cancelBtn = IconButton1(imgName: "LeftArrow", color: .white, frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        gradientView = MainGradientView(frame: CGRect(x:0,y:0,width:frame.width,height:frame.height))
+        cancelBtn = IconButton1(imgName: "LeftArrow", color: .black, frame: CGRect(x: 0, y: 0, width: 25, height: 25))
         
         switch type{
         case "phone":
@@ -70,11 +69,6 @@ final class SignupTopView:UIView{
         }
     }
     private func setup(frame:CGRect,ns1:CGFloat,ns2:CGFloat,ns3:CGFloat,ns4:CGFloat){
-        self.addSubview(gradientView)
-        gradientView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        gradientView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        gradientView.widthAnchor.constraint(equalToConstant: frame.width).isActive = true
-        gradientView.heightAnchor.constraint(equalToConstant: frame.height).isActive = true
         
         self.addSubview(titleLabel1)
         titleLabel1.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
